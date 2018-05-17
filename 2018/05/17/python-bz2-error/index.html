@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="前端小菜鸟，减肥爱好者">
+<meta name="description" content="最近在学机器学习，想跑一些demo，运行过程中报的错。 ModuleNotFoundError: No module named &amp;apos;_bz2&amp;apos; 这说明python在运行的时候少了一个_bz2的包。先后试了pip安装，但是都失败了，提示没有这样的包。 pip3 install _bz2 pip3 install bz2 上网查了一下，_biz主要提供了支持bzip2压缩算法的操作">
 <meta name="keywords" content="python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="No module named bz2错误解决方法">
-<meta property="og:url" content="http://yoursite.com/2018/05/17/这是我的第一篇博客/index.html">
+<meta property="og:url" content="http://yoursite.com/2018/05/17/python-bz2-error/index.html">
 <meta property="og:site_name" content="那一刻，我很暖">
-<meta property="og:description" content="前端小菜鸟，减肥爱好者">
+<meta property="og:description" content="最近在学机器学习，想跑一些demo，运行过程中报的错。 ModuleNotFoundError: No module named &amp;apos;_bz2&amp;apos; 这说明python在运行的时候少了一个_bz2的包。先后试了pip安装，但是都失败了，提示没有这样的包。 pip3 install _bz2 pip3 install bz2 上网查了一下，_biz主要提供了支持bzip2压缩算法的操作">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-17T12:13:54.282Z">
+<meta property="og:updated_time" content="2018-05-17T12:54:32.670Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="No module named bz2错误解决方法">
-<meta name="twitter:description" content="前端小菜鸟，减肥爱好者">
+<meta name="twitter:description" content="最近在学机器学习，想跑一些demo，运行过程中报的错。 ModuleNotFoundError: No module named &amp;apos;_bz2&amp;apos; 这说明python在运行的时候少了一个_bz2的包。先后试了pip安装，但是都失败了，提示没有这样的包。 pip3 install _bz2 pip3 install bz2 上网查了一下，_biz主要提供了支持bzip2压缩算法的操作">
 
 
 
@@ -120,7 +120,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/17/这是我的第一篇博客/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/17/python-bz2-error/"/>
 
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/17/这是我的第一篇博客/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/17/python-bz2-error/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="BeckyWang">
@@ -330,7 +330,29 @@
       
 
       
-        
+        <p>最近在学机器学习，想跑一些demo，运行过程中报的错。</p>
+<pre><code>ModuleNotFoundError: No module named &apos;_bz2&apos;
+</code></pre><p>这说明python在运行的时候少了一个_bz2的包。<br>先后试了pip安装，但是都失败了，提示没有这样的包。</p>
+<pre><code>pip3 install _bz2
+pip3 install bz2
+</code></pre><p>上网查了一下，_biz主要提供了支持bzip2压缩算法的操作功能。<br>如果python是你自己编译的，实际上需要安装bzip2-devel这个包后再编译，否则bz2无法使用。</p>
+<p>按照网上的方法，实际操作了一遍，解决了问题。</p>
+<ol>
+<li><p>重装bzip2。</p>
+<pre><code>wget http://www.bzip.org/1.0.6/bzip2-1.0.6.tar.gz
+tar -zxf  bzip2-1.0.6.tar.gz 
+
+cd bzip2-1.0.6  
+
+make -f  Makefile-libbz2_so 
+
+make &amp;&amp; make install
+</code></pre></li>
+<li><p>验证是否安装成功<br>进入python3环境，输入import bz2，回车，若没有报错即成功。</p>
+</li>
+</ol>
+<p>更多信息参考<a href="https://my.oschina.net/yangertt2006/blog/839220" target="_blank" rel="noopener">这个网站</a></p>
+
       
     </div>
     
