@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="python," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="前端小菜鸟，减肥爱好者">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+<meta name="description" content="最近在学机器学习，想跑一些demo，运行过程中报的错。 ModuleNotFoundError: No module named &amp;apos;_bz2&amp;apos; 这说明python在运行的时候少了一个_bz2的包。先后试了pip安装，但是都失败了，提示没有这样的包。 pip3 install _bz2 pip3 install bz2 上网查了一下，_biz主要提供了支持bzip2压缩算法的操作">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="No module named bz2错误解决方法">
+<meta property="og:url" content="http://yoursite.com/2018/05/17/python-bz2-error/index.html">
 <meta property="og:site_name" content="那一刻，我很暖">
-<meta property="og:description" content="前端小菜鸟，减肥爱好者">
+<meta property="og:description" content="最近在学机器学习，想跑一些demo，运行过程中报的错。 ModuleNotFoundError: No module named &amp;apos;_bz2&amp;apos; 这说明python在运行的时候少了一个_bz2的包。先后试了pip安装，但是都失败了，提示没有这样的包。 pip3 install _bz2 pip3 install bz2 上网查了一下，_biz主要提供了支持bzip2压缩算法的操作">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-17T11:10:44.088Z">
+<meta property="og:updated_time" content="2018-05-17T13:01:28.577Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
-<meta name="twitter:description" content="前端小菜鸟，减肥爱好者">
+<meta name="twitter:title" content="No module named bz2错误解决方法">
+<meta name="twitter:description" content="最近在学机器学习，想跑一些demo，运行过程中报的错。 ModuleNotFoundError: No module named &amp;apos;_bz2&amp;apos; 这说明python在运行的时候少了一个_bz2的包。先后试了pip安装，但是都失败了，提示没有这样的包。 pip3 install _bz2 pip3 install bz2 上网查了一下，_biz主要提供了支持bzip2压缩算法的操作">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/17/python-bz2-error/"/>
 
 
 
 
 
-  <title>tags | 那一刻，我很暖</title>
+  <title>No module named bz2错误解决方法 | 那一刻，我很暖</title>
   
 
 
@@ -250,40 +251,149 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/17/python-bz2-error/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="BeckyWang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="那一刻，我很暖">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">tags</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                目前共计 1 个标签
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/python/" style="font-size: 12px; color: #ccc">python</a>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">No module named bz2错误解决方法</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-17T17:19:15+08:00">
+                2018-05-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>最近在学机器学习，想跑一些demo，运行过程中报的错。</p>
+<pre><code>ModuleNotFoundError: No module named &apos;_bz2&apos;
+</code></pre><p>这说明python在运行的时候少了一个_bz2的包。<br>先后试了pip安装，但是都失败了，提示没有这样的包。</p>
+<pre><code>pip3 install _bz2
+pip3 install bz2
+</code></pre><p>上网查了一下，_biz主要提供了支持bzip2压缩算法的操作功能。<br>如果python是你自己编译的，实际上需要安装bzip2-devel这个包后再编译，否则bz2无法使用。</p>
+<p>按照网上的方法，实际操作了一遍，解决了问题。</p>
+<ol>
+<li><p>重装bzip2。</p>
+<pre><code>wget http://www.bzip.org/1.0.6/bzip2-1.0.6.tar.gz
+tar -zxf  bzip2-1.0.6.tar.gz 
+
+cd bzip2-1.0.6  
+
+make -f  Makefile-libbz2_so 
+
+make &amp;&amp; make install
+</code></pre></li>
+<li><p>验证是否安装成功<br>进入python3环境，输入import bz2，回车，若没有报错即成功。</p>
+</li>
+</ol>
+<p>更多信息参考<a href="https://my.oschina.net/yangertt2006/blog/839220" target="_blank" rel="noopener">这个网站</a></p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/python/" rel="tag"># python</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
