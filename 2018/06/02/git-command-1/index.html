@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="今晚月色很美">
 <meta property="og:description" content="最近在学习git的使用，总结于廖雪峰的网站 创建一个版本库$ mkdir &amp;lt;repository-name&amp;gt;$ cd &amp;lt;repository-name&amp;gt;$ pwd 显示当前目录 p.s. 所有的版本控制系统，其实只能跟踪文本文件的改动，比如TXT文件，网页，所有的程序代码等等，Git也不例外。版本控制系统可以告诉你每次的改动，比如在第5行加了一个单词“Linux”，在第8行">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-02T08:41:06.786Z">
+<meta property="og:updated_time" content="2018-06-04T01:00:16.622Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git常用命令——本地仓库">
 <meta name="twitter:description" content="最近在学习git的使用，总结于廖雪峰的网站 创建一个版本库$ mkdir &amp;lt;repository-name&amp;gt;$ cd &amp;lt;repository-name&amp;gt;$ pwd 显示当前目录 p.s. 所有的版本控制系统，其实只能跟踪文本文件的改动，比如TXT文件，网页，所有的程序代码等等，Git也不例外。版本控制系统可以告诉你每次的改动，比如在第5行加了一个单词“Linux”，在第8行">
@@ -333,20 +333,20 @@
         <p>最近在学习git的使用，总结于<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">廖雪峰的网站</a></p>
 <h2 id="创建一个版本库"><a href="#创建一个版本库" class="headerlink" title="创建一个版本库"></a>创建一个版本库</h2><p>$ mkdir &lt;repository-name&gt;<br>$ cd &lt;repository-name&gt;<br>$ pwd 显示当前目录</p>
 <p>p.s. 所有的版本控制系统，其实只能跟踪文本文件的改动，比如TXT文件，网页，所有的程序代码等等，Git也不例外。版本控制系统可以告诉你每次的改动，比如在第5行加了一个单词“Linux”，在第8行删了一个单词“Windows”。而图片、视频这些二进制文件，虽然也能由版本控制系统管理，但没法跟踪文件的变化，只能把二进制文件每次改动串起来，也就是只知道图片从100KB改成了120KB，但到底改了啥，版本控制系统不知道，也没法知道。</p>
-<h2 id="本地仓库git常用命令"><a href="#本地仓库git常用命令" class="headerlink" title="本地仓库git常用命令"></a>本地仓库git常用命令</h2><h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>git init 初始化一个git仓库</p>
-<p>git add &lt;file&gt; 暂存文件到暂存区<br>git add . 暂存所有文件</p>
-<p>git commit  -m ‘***’ 提交文件到当前分支（本地仓库）</p>
+<h2 id="本地仓库git常用命令"><a href="#本地仓库git常用命令" class="headerlink" title="本地仓库git常用命令"></a>本地仓库git常用命令</h2><h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p><strong>git init</strong> 初始化一个git仓库</p>
+<p><strong>git add &lt;file&gt;</strong> 暂存文件到暂存区<br><strong>git add .</strong> 暂存所有文件</p>
+<p><strong>git commit  -m ‘***‘</strong> 提交文件到当前分支（本地仓库）</p>
 <p>p.s. 建Git版本库时，Git自动为我们创建了唯一一个master分支，所以git commit就是往master分支上提交更改。<br>每次修改，如果不用git add到暂存区，那就不会加到commit中。</p>
-<h3 id="查看状态"><a href="#查看状态" class="headerlink" title="查看状态"></a>查看状态</h3><p>git status 查看仓库当前的状态</p>
-<p>git diff 查看difference</p>
-<h3 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h3><p>git log 显示从最近到最远的提交<br>git log –pretty=online 简化输出信息</p>
-<p>git reset –hard HEAD^ 回退到上一个版本<br>git reset –hard &lt;commd-id&gt; 回到指定版本，版本号写几位就行</p>
-<p>git reflog 记录每一次命令</p>
+<h3 id="查看状态"><a href="#查看状态" class="headerlink" title="查看状态"></a>查看状态</h3><p><strong>git status</strong> 查看仓库当前的状态</p>
+<p><strong>git diff</strong> 查看difference</p>
+<h3 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h3><p><strong>git log</strong> 显示从最近到最远的提交<br><strong>git log –pretty=online</strong> 简化输出信息</p>
+<p><strong>git reset –hard HEAD^</strong> 回退到上一个版本<br><strong>git reset –hard &lt;commd-id&gt;</strong> 回到指定版本，版本号写几位就行</p>
+<p><strong>git reflog</strong> 记录每一次命令</p>
 <p>p.s. $ cat &lt;file&gt; 查看文件详细信息</p>
-<h3 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h3><p>git checkout – &lt;file&gt; 丢弃工作区的修改，即让文件回到最近一次git commit或git add时的状态（没有–，就变成了“切换到另一个分支”的命令）</p>
-<p>git reset HEAD &lt;file&gt; 把暂存区的修改撤销掉，重新放回工作区（HEAD表示最新的版本）</p>
-<h3 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h3><p>$ rm &lt;file&gt; 本地（工作区）删除文件</p>
-<p>git rm &lt;file&gt; + git commit<br>从版本库（本地仓库）删除文件，然后提交</p>
+<h3 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h3><p><strong>git checkout – &lt;file&gt;</strong> 丢弃工作区的修改，即让文件回到最近一次git commit或git add时的状态（没有–，就变成了“切换到另一个分支”的命令）</p>
+<p><strong>git reset HEAD &lt;file&gt;</strong> 把暂存区的修改撤销掉，重新放回工作区（HEAD表示最新的版本）</p>
+<h3 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h3><p><strong>$ rm &lt;file&gt;</strong> 本地（工作区）删除文件</p>
+<p><strong>git rm &lt;file&gt;</strong> + <strong>git commit</strong><br>从版本库（本地仓库）删除文件，然后提交</p>
 
       
     </div>

@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="更多参考 这个网站 打标签git tag 列出现有标签git tag -l ‘v1.4.2.*’ 用特定的搜索模式列出符合条件的标签（只对 1.4.2 系列的版本感兴趣） git show v1.4 查看相应标签的版本信息 p.s. Git 使用的标签有两种类型：轻量级的（lightweight）和含附注的（annotated）。轻量级标签就像是个不会变化的分支，实际上它就是个指向特定提交对象的引">
+<meta name="description" content="更多参考 这个网站 打标签git tag 列出现有标签git tag -l ‘v1.4.2.*‘ 用特定的搜索模式列出符合条件的标签（只对 1.4.2 系列的版本感兴趣） git show v1.4 查看相应标签的版本信息 p.s. Git 使用的标签有两种类型：轻量级的（lightweight）和含附注的（annotated）。轻量级标签就像是个不会变化的分支，实际上它就是个指向特定提交对象的引">
 <meta name="keywords" content="git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git常用命令——打标签">
 <meta property="og:url" content="http://yoursite.com/2018/06/03/git-command-3/index.html">
 <meta property="og:site_name" content="今晚月色很美">
-<meta property="og:description" content="更多参考 这个网站 打标签git tag 列出现有标签git tag -l ‘v1.4.2.*’ 用特定的搜索模式列出符合条件的标签（只对 1.4.2 系列的版本感兴趣） git show v1.4 查看相应标签的版本信息 p.s. Git 使用的标签有两种类型：轻量级的（lightweight）和含附注的（annotated）。轻量级标签就像是个不会变化的分支，实际上它就是个指向特定提交对象的引">
+<meta property="og:description" content="更多参考 这个网站 打标签git tag 列出现有标签git tag -l ‘v1.4.2.*‘ 用特定的搜索模式列出符合条件的标签（只对 1.4.2 系列的版本感兴趣） git show v1.4 查看相应标签的版本信息 p.s. Git 使用的标签有两种类型：轻量级的（lightweight）和含附注的（annotated）。轻量级标签就像是个不会变化的分支，实际上它就是个指向特定提交对象的引">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-03T07:45:44.238Z">
+<meta property="og:updated_time" content="2018-06-04T00:57:03.208Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git常用命令——打标签">
-<meta name="twitter:description" content="更多参考 这个网站 打标签git tag 列出现有标签git tag -l ‘v1.4.2.*’ 用特定的搜索模式列出符合条件的标签（只对 1.4.2 系列的版本感兴趣） git show v1.4 查看相应标签的版本信息 p.s. Git 使用的标签有两种类型：轻量级的（lightweight）和含附注的（annotated）。轻量级标签就像是个不会变化的分支，实际上它就是个指向特定提交对象的引">
+<meta name="twitter:description" content="更多参考 这个网站 打标签git tag 列出现有标签git tag -l ‘v1.4.2.*‘ 用特定的搜索模式列出符合条件的标签（只对 1.4.2 系列的版本感兴趣） git show v1.4 查看相应标签的版本信息 p.s. Git 使用的标签有两种类型：轻量级的（lightweight）和含附注的（annotated）。轻量级标签就像是个不会变化的分支，实际上它就是个指向特定提交对象的引">
 
 
 
@@ -331,15 +331,15 @@
 
       
         <p>更多参考 <a href="https://git-scm.com/book/zh/v1/Git-%E5%9F%BA%E7%A1%80-%E6%89%93%E6%A0%87%E7%AD%BE" target="_blank" rel="noopener">这个网站</a></p>
-<h2 id="打标签"><a href="#打标签" class="headerlink" title="打标签"></a>打标签</h2><p>git tag 列出现有标签<br>git tag -l ‘v1.4.2.*’ 用特定的搜索模式列出符合条件的标签（只对 1.4.2 系列的版本感兴趣）</p>
-<p>git show v1.4 查看相应标签的版本信息</p>
+<h2 id="打标签"><a href="#打标签" class="headerlink" title="打标签"></a>打标签</h2><p><strong>git tag</strong> 列出现有标签<br><strong>git tag -l ‘v1.4.2.*‘</strong> 用特定的搜索模式列出符合条件的标签（只对 1.4.2 系列的版本感兴趣）</p>
+<p><strong>git show v1.4</strong> 查看相应标签的版本信息</p>
 <p>p.s. Git 使用的标签有两种类型：轻量级的（lightweight）和含附注的（annotated）。<br>轻量级标签就像是个不会变化的分支，实际上它就是个指向特定提交对象的引用。<br>而含附注标签，实际上是存储在仓库中的一个独立对象，它有自身的校验和信息，包含着标签的名字，电子邮件地址和日期，以及标签说明，标签本身也允许使用 GNU Privacy Guard (GPG) 来签署或验证。<br>一般我们都建议使用含附注型的标签，以便保留相关信息；当然，如果只是临时性加注标签，或者不需要旁注额外信息，用轻量级标签也没问题。</p>
-<p>git tag -a v1.4 -m ‘my version 1.4’ 创建一个含附注类型的标签，用-a， -m 选项则指定了对应的标签说明</p>
-<p>git tag -s v1.5 -m ‘my signed 1.5 tag’  如果你有自己的私钥，还可以用 GPG 来签署标签，只需要把之前的 -a 改为 -s</p>
-<p>git tag v1.4-lw 创建一个轻量级标签</p>
-<p>git tag -v [tag-name] 验证已经签署的标签</p>
-<p>git tag -a v1.2 9fceb02  对早先的某次提交加注标签（对版本号前几位是9fceb02的提交打上v1.2的标签）</p>
-<p>git push origin [tagname] 分享标签（默认情况下，git push 并不会把标签传送到远端服务器上，只有通过显式命令才能分享标签到远端仓库。）<br>git push origin –tags 一次推送所有本地新增的标签上去</p>
+<p><strong>git tag -a v1.4 -m ‘my version 1.4’</strong> 创建一个含附注类型的标签，用-a， -m 选项则指定了对应的标签说明</p>
+<p><strong>git tag -s v1.5 -m ‘my signed 1.5 tag’</strong>  如果你有自己的私钥，还可以用 GPG 来签署标签，只需要把之前的 -a 改为 -s</p>
+<p><strong>git tag v1.4-lw 创建一个轻量级标签</strong></p>
+<p><strong>git tag -v [tag-name]</strong> 验证已经签署的标签</p>
+<p><strong>git tag -a v1.2 9fceb02</strong> 对早先的某次提交加注标签（对版本号前几位是9fceb02的提交打上v1.2的标签）</p>
+<p><strong>git push origin [tagname]</strong> 分享标签（默认情况下，git push 并不会把标签传送到远端服务器上，只有通过显式命令才能分享标签到远端仓库。）<br><strong>git push origin –tags</strong> 一次推送所有本地新增的标签上去</p>
 
       
     </div>
