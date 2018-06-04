@@ -72,7 +72,7 @@
 
 
 
-  <meta name="keywords" content="html," />
+  <meta name="keywords" content="git," />
 
 
 
@@ -83,20 +83,18 @@
 
 
 
-<meta name="description" content="浏览掘金时发现一个很好玩的表情包生成器，也是最近比较火的表情包：今天这个仇先记下来了。 原理非常简单，具体实现方式就是利用截图工具 html2canvas 对一个 Div 进行截图，在这个 Div 里有记仇的图片和可编辑的文本框，文字里的时间自动生成。 亲自实现了下，还是挺有意思的，下次需要自定义记仇表情包就可以直接生成了。 点击 这里 查看代码。">
-<meta name="keywords" content="html">
+<meta name="description" content="更多参考 这个网站 打标签git tag 列出现有标签git tag -l ‘v1.4.2.*‘ 用特定的搜索模式列出符合条件的标签（只对 1.4.2 系列的版本感兴趣） git show v1.4 查看相应标签的版本信息 p.s. Git 使用的标签有两种类型：轻量级的（lightweight）和含附注的（annotated）。轻量级标签就像是个不会变化的分支，实际上它就是个指向特定提交对象的引">
+<meta name="keywords" content="git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="今天你记仇了吗">
-<meta property="og:url" content="http://yoursite.com/2018/04/22/hold-the-grudge/index.html">
+<meta property="og:title" content="git常用命令——打标签">
+<meta property="og:url" content="http://yoursite.com/git-command-3.html">
 <meta property="og:site_name" content="今晚月色很美">
-<meta property="og:description" content="浏览掘金时发现一个很好玩的表情包生成器，也是最近比较火的表情包：今天这个仇先记下来了。 原理非常简单，具体实现方式就是利用截图工具 html2canvas 对一个 Div 进行截图，在这个 Div 里有记仇的图片和可编辑的文本框，文字里的时间自动生成。 亲自实现了下，还是挺有意思的，下次需要自定义记仇表情包就可以直接生成了。 点击 这里 查看代码。">
+<meta property="og:description" content="更多参考 这个网站 打标签git tag 列出现有标签git tag -l ‘v1.4.2.*‘ 用特定的搜索模式列出符合条件的标签（只对 1.4.2 系列的版本感兴趣） git show v1.4 查看相应标签的版本信息 p.s. Git 使用的标签有两种类型：轻量级的（lightweight）和含附注的（annotated）。轻量级标签就像是个不会变化的分支，实际上它就是个指向特定提交对象的引">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/images/jichou.png">
-<meta property="og:updated_time" content="2018-06-04T07:53:35.895Z">
+<meta property="og:updated_time" content="2018-06-04T07:54:42.304Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="今天你记仇了吗">
-<meta name="twitter:description" content="浏览掘金时发现一个很好玩的表情包生成器，也是最近比较火的表情包：今天这个仇先记下来了。 原理非常简单，具体实现方式就是利用截图工具 html2canvas 对一个 Div 进行截图，在这个 Div 里有记仇的图片和可编辑的文本框，文字里的时间自动生成。 亲自实现了下，还是挺有意思的，下次需要自定义记仇表情包就可以直接生成了。 点击 这里 查看代码。">
-<meta name="twitter:image" content="http://yoursite.com/images/jichou.png">
+<meta name="twitter:title" content="git常用命令——打标签">
+<meta name="twitter:description" content="更多参考 这个网站 打标签git tag 列出现有标签git tag -l ‘v1.4.2.*‘ 用特定的搜索模式列出符合条件的标签（只对 1.4.2 系列的版本感兴趣） git show v1.4 查看相应标签的版本信息 p.s. Git 使用的标签有两种类型：轻量级的（lightweight）和含附注的（annotated）。轻量级标签就像是个不会变化的分支，实际上它就是个指向特定提交对象的引">
 
 
 
@@ -126,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/22/hold-the-grudge/"/>
+  <link rel="canonical" href="http://yoursite.com/git-command-3.html"/>
 
 
 
 
 
-  <title>今天你记仇了吗 | 今晚月色很美</title>
+  <title>git常用命令——打标签 | 今晚月色很美</title>
   
 
 
@@ -259,7 +257,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/22/hold-the-grudge/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/git-command-3.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="BeckyWang">
@@ -276,7 +274,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">今天你记仇了吗</h1>
+          <h1 class="post-title" itemprop="name headline">git常用命令——打标签</h1>
         
 
         <div class="post-meta">
@@ -288,8 +286,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-22T16:23:33+08:00">
-                2018-04-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-06T15:42:59+08:00">
+                2018-05-06
               </time>
             
 
@@ -331,10 +329,16 @@
       
 
       
-        <p>浏览掘金时发现一个很好玩的表情包生成器，也是最近比较火的表情包：今天这个仇先记下来了。<br><img src="/images/jichou.png" alt="jichou" style="width: 300px"></p>
-<p>原理非常简单，具体实现方式就是利用截图工具 <a href="http://html2canvas.hertzen.com/" target="_blank" rel="noopener">html2canvas</a> 对一个 Div 进行截图，在这个 Div 里有记仇的图片和可编辑的文本框，文字里的时间自动生成。</p>
-<p>亲自实现了下，还是挺有意思的，下次需要自定义记仇表情包就可以直接生成了。</p>
-<p>点击 <a href="https://github.com/BeckyWang/hold-the-grudge" target="_blank" rel="noopener">这里</a> 查看代码。</p>
+        <p>更多参考 <a href="https://git-scm.com/book/zh/v1/Git-%E5%9F%BA%E7%A1%80-%E6%89%93%E6%A0%87%E7%AD%BE" target="_blank" rel="noopener">这个网站</a></p>
+<h2 id="打标签"><a href="#打标签" class="headerlink" title="打标签"></a>打标签</h2><p><strong>git tag</strong> 列出现有标签<br><strong>git tag -l ‘v1.4.2.*‘</strong> 用特定的搜索模式列出符合条件的标签（只对 1.4.2 系列的版本感兴趣）</p>
+<p><strong>git show v1.4</strong> 查看相应标签的版本信息</p>
+<p>p.s. Git 使用的标签有两种类型：轻量级的（lightweight）和含附注的（annotated）。<br>轻量级标签就像是个不会变化的分支，实际上它就是个指向特定提交对象的引用。<br>而含附注标签，实际上是存储在仓库中的一个独立对象，它有自身的校验和信息，包含着标签的名字，电子邮件地址和日期，以及标签说明，标签本身也允许使用 GNU Privacy Guard (GPG) 来签署或验证。<br>一般我们都建议使用含附注型的标签，以便保留相关信息；当然，如果只是临时性加注标签，或者不需要旁注额外信息，用轻量级标签也没问题。</p>
+<p><strong>git tag -a v1.4 -m ‘my version 1.4’</strong> 创建一个含附注类型的标签，用-a， -m 选项则指定了对应的标签说明</p>
+<p><strong>git tag -s v1.5 -m ‘my signed 1.5 tag’</strong>  如果你有自己的私钥，还可以用 GPG 来签署标签，只需要把之前的 -a 改为 -s</p>
+<p><strong>git tag v1.4-lw 创建一个轻量级标签</strong></p>
+<p><strong>git tag -v [tag-name]</strong> 验证已经签署的标签</p>
+<p><strong>git tag -a v1.2 9fceb02</strong> 对早先的某次提交加注标签（对版本号前几位是9fceb02的提交打上v1.2的标签）</p>
+<p><strong>git push origin [tagname]</strong> 分享标签（默认情况下，git push 并不会把标签传送到远端服务器上，只有通过显式命令才能分享标签到远端仓库。）<br><strong>git push origin –tags</strong> 一次推送所有本地新增的标签上去</p>
 
       
     </div>
@@ -352,7 +356,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/html/" rel="tag"><i class="fa fa-tag"></i> html</a>
+            <a href="/tags/git/" rel="tag"><i class="fa fa-tag"></i> git</a>
           
         </div>
       
@@ -365,8 +369,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/17/python-bz2-error-1/" rel="next" title="No module named bz2错误解决方法">
-                <i class="fa fa-chevron-left"></i> No module named bz2错误解决方法
+              <a href="/git-command-2.html" rel="next" title="git常用命令——远程仓库">
+                <i class="fa fa-chevron-left"></i> git常用命令——远程仓库
               </a>
             
           </div>
@@ -375,8 +379,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/05/01/vscode-plugins/" rel="prev" title="vscode常用插件记录">
-                vscode常用插件记录 <i class="fa fa-chevron-right"></i>
+              <a href="/git-command-4.html" rel="prev" title="git常用命令——分支管理">
+                git常用命令——分支管理 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -429,8 +433,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -501,6 +514,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#打标签"><span class="nav-number">1.</span> <span class="nav-text">打标签</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

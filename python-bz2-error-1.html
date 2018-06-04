@@ -72,7 +72,7 @@
 
 
 
-  <meta name="keywords" content="git," />
+  <meta name="keywords" content="python," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="参考 廖雪峰的网站 和 这个网站 连接本地仓库和远程仓库 创建SSH $ ssh-keygen -t rsa -C “email-address” 登录远程仓库（github），添加 SSH KEY：在Key文本框里粘贴id_rsa.pub文件的内容。  p.s. GitHub需要识别出你推送的提交确实是你推送的，而不是别人冒充的，而Git支持SSH协议，所以，GitHub只要知道了你的公钥，就可">
-<meta name="keywords" content="git">
+<meta name="description" content="最近在学机器学习，想跑一些demo，运行过程中报的错。 ModuleNotFoundError: No module named &amp;apos;_bz2&amp;apos; 这说明python在运行的时候少了一个_bz2的包。先后试了pip安装，但是都失败了，提示没有这样的包。 pip3 install _bz2 pip3 install bz2 上网查了一下，_biz主要提供了支持bzip2压缩算法的操作">
+<meta name="keywords" content="python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git常用命令——远程仓库">
-<meta property="og:url" content="http://yoursite.com/2018/05/05/git-command-2/index.html">
+<meta property="og:title" content="No module named bz2错误解决方法">
+<meta property="og:url" content="http://yoursite.com/python-bz2-error-1.html">
 <meta property="og:site_name" content="今晚月色很美">
-<meta property="og:description" content="参考 廖雪峰的网站 和 这个网站 连接本地仓库和远程仓库 创建SSH $ ssh-keygen -t rsa -C “email-address” 登录远程仓库（github），添加 SSH KEY：在Key文本框里粘贴id_rsa.pub文件的内容。  p.s. GitHub需要识别出你推送的提交确实是你推送的，而不是别人冒充的，而Git支持SSH协议，所以，GitHub只要知道了你的公钥，就可">
+<meta property="og:description" content="最近在学机器学习，想跑一些demo，运行过程中报的错。 ModuleNotFoundError: No module named &amp;apos;_bz2&amp;apos; 这说明python在运行的时候少了一个_bz2的包。先后试了pip安装，但是都失败了，提示没有这样的包。 pip3 install _bz2 pip3 install bz2 上网查了一下，_biz主要提供了支持bzip2压缩算法的操作">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-04T07:54:33.647Z">
+<meta property="og:updated_time" content="2018-06-04T07:53:27.431Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git常用命令——远程仓库">
-<meta name="twitter:description" content="参考 廖雪峰的网站 和 这个网站 连接本地仓库和远程仓库 创建SSH $ ssh-keygen -t rsa -C “email-address” 登录远程仓库（github），添加 SSH KEY：在Key文本框里粘贴id_rsa.pub文件的内容。  p.s. GitHub需要识别出你推送的提交确实是你推送的，而不是别人冒充的，而Git支持SSH协议，所以，GitHub只要知道了你的公钥，就可">
+<meta name="twitter:title" content="No module named bz2错误解决方法">
+<meta name="twitter:description" content="最近在学机器学习，想跑一些demo，运行过程中报的错。 ModuleNotFoundError: No module named &amp;apos;_bz2&amp;apos; 这说明python在运行的时候少了一个_bz2的包。先后试了pip安装，但是都失败了，提示没有这样的包。 pip3 install _bz2 pip3 install bz2 上网查了一下，_biz主要提供了支持bzip2压缩算法的操作">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/05/git-command-2/"/>
+  <link rel="canonical" href="http://yoursite.com/python-bz2-error-1.html"/>
 
 
 
 
 
-  <title>git常用命令——远程仓库 | 今晚月色很美</title>
+  <title>No module named bz2错误解决方法 | 今晚月色很美</title>
   
 
 
@@ -257,7 +257,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/05/git-command-2/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/python-bz2-error-1.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="BeckyWang">
@@ -274,7 +274,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">git常用命令——远程仓库</h1>
+          <h1 class="post-title" itemprop="name headline">No module named bz2错误解决方法</h1>
         
 
         <div class="post-meta">
@@ -286,8 +286,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-05T16:42:23+08:00">
-                2018-05-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-17T17:19:15+08:00">
+                2018-04-17
               </time>
             
 
@@ -329,22 +329,28 @@
       
 
       
-        <p>参考 <a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">廖雪峰的网站</a> 和 <a href="https://git-scm.com/book/zh/v1/%E8%B5%B7%E6%AD%A5" target="_blank" rel="noopener">这个网站</a></p>
-<h2 id="连接本地仓库和远程仓库"><a href="#连接本地仓库和远程仓库" class="headerlink" title="连接本地仓库和远程仓库"></a>连接本地仓库和远程仓库</h2><ul>
-<li>创建SSH $ ssh-keygen -t rsa -C “email-address”</li>
-<li>登录远程仓库（github），添加 SSH KEY：在Key文本框里粘贴id_rsa.pub文件的内容。</li>
-</ul>
-<p>p.s. GitHub需要识别出你推送的提交确实是你推送的，而不是别人冒充的，而Git支持SSH协议，所以，GitHub只要知道了你的公钥，就可以确认只有你自己才能送。<br>GitHub允许你添加多个Key。只要把每台电脑的Key都添加到GitHub，就可以在每台电脑上往GitHub推送了。</p>
-<h2 id="远程仓库git常用命令"><a href="#远程仓库git常用命令" class="headerlink" title="远程仓库git常用命令"></a>远程仓库git常用命令</h2><h3 id="查看当前远程库"><a href="#查看当前远程库" class="headerlink" title="查看当前远程库"></a>查看当前远程库</h3><p><strong>git remote -v</strong> -v及–verbose缩写，显示对应的克隆地址</p>
-<h3 id="添加远程仓库"><a href="#添加远程仓库" class="headerlink" title="添加远程仓库"></a>添加远程仓库</h3><p><strong>git clone &lt;address&gt;</strong> 在本地克隆远程仓库</p>
-<p><strong>git remote add origin &lt;address&gt;</strong> 将本地库和远程库关联。（远程库的名字就是origin，这是Git默认的叫法，也可以改成别的）</p>
-<p><strong>git fetch &lt;remote-name&gt;</strong> 从远程仓库抓取数据到本地（remote-name指远程库对应的名字）</p>
-<p>p.s. 此命令会到远程仓库中拉取所有你本地仓库中还没有的数据。运行完成后，你就可以在本地访问该远程仓库中的所有分支，将其中某个分支合并到本地，或者只是取出某个分支，一探究竟。<br>如果是克隆了一个仓库，此命令会自动将远程仓库归于 origin 名下。所以，git fetch origin 会抓取从你上次克隆以来别人上传到此远程仓库中的所有更新（或是上次 fetch 以来别人提交的更新）。</p>
-<p>p.s. fetch 命令只是将远端的数据拉到本地仓库，并不自动合并到当前工作分支，只有当你确实准备好了，才能手工合并。<br> git pull目的是要从原始克隆的远端仓库中抓取数据后，合并到工作目录中的当前分支。</p>
-<h3 id="推送数据"><a href="#推送数据" class="headerlink" title="推送数据"></a>推送数据</h3><p><strong>git push -u [remote-name: origin] [branch-name: master]</strong> 把本地库的所有内容推送到远程库（把本地的 master 分支推送到 origin 服务器上）（加上-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。）</p>
-<h3 id="远程仓库管理"><a href="#远程仓库管理" class="headerlink" title="远程仓库管理"></a>远程仓库管理</h3><p><strong>git remote show [remote-name]</strong> 查看某个远程仓库的详细信息</p>
-<p><strong>git remote rename &lt;old_name&gt; &lt;new_name&gt;</strong> 修改某个远程仓库在本地的简称（对远程仓库的重命名，也会使对应的分支名称发生变化）</p>
-<p><strong>git remote rm [remote-name]</strong> 移除对应的远端仓库</p>
+        <p>最近在学机器学习，想跑一些demo，运行过程中报的错。</p>
+<pre><code>ModuleNotFoundError: No module named &apos;_bz2&apos;
+</code></pre><p>这说明python在运行的时候少了一个_bz2的包。<br>先后试了pip安装，但是都失败了，提示没有这样的包。</p>
+<pre><code>pip3 install _bz2
+pip3 install bz2
+</code></pre><p>上网查了一下，_biz主要提供了支持bzip2压缩算法的操作功能。<br>如果python是你自己编译的，实际上需要安装bzip2-devel这个包后再编译，否则bz2无法使用。</p>
+<p>按照网上的方法，实际操作了一遍，解决了问题。</p>
+<ol>
+<li><p>重装bzip2。</p>
+<pre><code>wget http://www.bzip.org/1.0.6/bzip2-1.0.6.tar.gz
+tar -zxf  bzip2-1.0.6.tar.gz 
+
+cd bzip2-1.0.6  
+
+make -f  Makefile-libbz2_so 
+
+make &amp;&amp; make install
+</code></pre></li>
+<li><p>验证是否安装成功<br>进入python3环境，输入import bz2，回车，若没有报错即成功。</p>
+</li>
+</ol>
+<p>更多信息参考<a href="https://my.oschina.net/yangertt2006/blog/839220" target="_blank" rel="noopener">这个网站</a></p>
 
       
     </div>
@@ -362,7 +368,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/git/" rel="tag"><i class="fa fa-tag"></i> git</a>
+            <a href="/tags/python/" rel="tag"><i class="fa fa-tag"></i> python</a>
           
         </div>
       
@@ -375,18 +381,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/04/git-command-1/" rel="next" title="git常用命令——本地仓库">
-                <i class="fa fa-chevron-left"></i> git常用命令——本地仓库
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/05/06/git-command-3/" rel="prev" title="git常用命令——打标签">
-                git常用命令——打标签 <i class="fa fa-chevron-right"></i>
+              <a href="/hold-the-grudge.html" rel="prev" title="今天你记仇了吗">
+                今天你记仇了吗 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -439,17 +441,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -520,22 +513,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#连接本地仓库和远程仓库"><span class="nav-number">1.</span> <span class="nav-text">连接本地仓库和远程仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#远程仓库git常用命令"><span class="nav-number">2.</span> <span class="nav-text">远程仓库git常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查看当前远程库"><span class="nav-number">2.1.</span> <span class="nav-text">查看当前远程库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加远程仓库"><span class="nav-number">2.2.</span> <span class="nav-text">添加远程仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#推送数据"><span class="nav-number">2.3.</span> <span class="nav-text">推送数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#远程仓库管理"><span class="nav-number">2.4.</span> <span class="nav-text">远程仓库管理</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       

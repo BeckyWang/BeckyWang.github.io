@@ -72,7 +72,7 @@
 
 
 
-  <meta name="keywords" content="git," />
+  <meta name="keywords" content="svn," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="更多参考 这个网站 打标签git tag 列出现有标签git tag -l ‘v1.4.2.*‘ 用特定的搜索模式列出符合条件的标签（只对 1.4.2 系列的版本感兴趣） git show v1.4 查看相应标签的版本信息 p.s. Git 使用的标签有两种类型：轻量级的（lightweight）和含附注的（annotated）。轻量级标签就像是个不会变化的分支，实际上它就是个指向特定提交对象的引">
-<meta name="keywords" content="git">
+<meta name="description" content="checkoutsvn checkout &amp;lt;url&amp;gt; 将文件checkout到本地，url是服务器上的目录svn co &amp;lt;url&amp;gt; 简写 添加文件svn add &amp;lt;file&amp;gt; 将本地新文件添加到版本库svn add *.js 添加当前目录下所有js文件 提交代码svn commit -m ‘***‘ 提交改动的文件到版本库svn ci -m ‘***‘ 简写sv">
+<meta name="keywords" content="svn">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git常用命令——打标签">
-<meta property="og:url" content="http://yoursite.com/2018/05/06/git-command-3/index.html">
+<meta property="og:title" content="mac终端下svn常用命令">
+<meta property="og:url" content="http://yoursite.com/mac-svn-command.html">
 <meta property="og:site_name" content="今晚月色很美">
-<meta property="og:description" content="更多参考 这个网站 打标签git tag 列出现有标签git tag -l ‘v1.4.2.*‘ 用特定的搜索模式列出符合条件的标签（只对 1.4.2 系列的版本感兴趣） git show v1.4 查看相应标签的版本信息 p.s. Git 使用的标签有两种类型：轻量级的（lightweight）和含附注的（annotated）。轻量级标签就像是个不会变化的分支，实际上它就是个指向特定提交对象的引">
+<meta property="og:description" content="checkoutsvn checkout &amp;lt;url&amp;gt; 将文件checkout到本地，url是服务器上的目录svn co &amp;lt;url&amp;gt; 简写 添加文件svn add &amp;lt;file&amp;gt; 将本地新文件添加到版本库svn add *.js 添加当前目录下所有js文件 提交代码svn commit -m ‘***‘ 提交改动的文件到版本库svn ci -m ‘***‘ 简写sv">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-04T07:54:42.304Z">
+<meta property="og:updated_time" content="2018-06-04T07:55:04.985Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git常用命令——打标签">
-<meta name="twitter:description" content="更多参考 这个网站 打标签git tag 列出现有标签git tag -l ‘v1.4.2.*‘ 用特定的搜索模式列出符合条件的标签（只对 1.4.2 系列的版本感兴趣） git show v1.4 查看相应标签的版本信息 p.s. Git 使用的标签有两种类型：轻量级的（lightweight）和含附注的（annotated）。轻量级标签就像是个不会变化的分支，实际上它就是个指向特定提交对象的引">
+<meta name="twitter:title" content="mac终端下svn常用命令">
+<meta name="twitter:description" content="checkoutsvn checkout &amp;lt;url&amp;gt; 将文件checkout到本地，url是服务器上的目录svn co &amp;lt;url&amp;gt; 简写 添加文件svn add &amp;lt;file&amp;gt; 将本地新文件添加到版本库svn add *.js 添加当前目录下所有js文件 提交代码svn commit -m ‘***‘ 提交改动的文件到版本库svn ci -m ‘***‘ 简写sv">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/06/git-command-3/"/>
+  <link rel="canonical" href="http://yoursite.com/mac-svn-command.html"/>
 
 
 
 
 
-  <title>git常用命令——打标签 | 今晚月色很美</title>
+  <title>mac终端下svn常用命令 | 今晚月色很美</title>
   
 
 
@@ -257,7 +257,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/06/git-command-3/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/mac-svn-command.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="BeckyWang">
@@ -274,7 +274,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">git常用命令——打标签</h1>
+          <h1 class="post-title" itemprop="name headline">mac终端下svn常用命令</h1>
         
 
         <div class="post-meta">
@@ -286,8 +286,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-06T15:42:59+08:00">
-                2018-05-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-14T15:42:01+08:00">
+                2018-05-14
               </time>
             
 
@@ -329,16 +329,29 @@
       
 
       
-        <p>更多参考 <a href="https://git-scm.com/book/zh/v1/Git-%E5%9F%BA%E7%A1%80-%E6%89%93%E6%A0%87%E7%AD%BE" target="_blank" rel="noopener">这个网站</a></p>
-<h2 id="打标签"><a href="#打标签" class="headerlink" title="打标签"></a>打标签</h2><p><strong>git tag</strong> 列出现有标签<br><strong>git tag -l ‘v1.4.2.*‘</strong> 用特定的搜索模式列出符合条件的标签（只对 1.4.2 系列的版本感兴趣）</p>
-<p><strong>git show v1.4</strong> 查看相应标签的版本信息</p>
-<p>p.s. Git 使用的标签有两种类型：轻量级的（lightweight）和含附注的（annotated）。<br>轻量级标签就像是个不会变化的分支，实际上它就是个指向特定提交对象的引用。<br>而含附注标签，实际上是存储在仓库中的一个独立对象，它有自身的校验和信息，包含着标签的名字，电子邮件地址和日期，以及标签说明，标签本身也允许使用 GNU Privacy Guard (GPG) 来签署或验证。<br>一般我们都建议使用含附注型的标签，以便保留相关信息；当然，如果只是临时性加注标签，或者不需要旁注额外信息，用轻量级标签也没问题。</p>
-<p><strong>git tag -a v1.4 -m ‘my version 1.4’</strong> 创建一个含附注类型的标签，用-a， -m 选项则指定了对应的标签说明</p>
-<p><strong>git tag -s v1.5 -m ‘my signed 1.5 tag’</strong>  如果你有自己的私钥，还可以用 GPG 来签署标签，只需要把之前的 -a 改为 -s</p>
-<p><strong>git tag v1.4-lw 创建一个轻量级标签</strong></p>
-<p><strong>git tag -v [tag-name]</strong> 验证已经签署的标签</p>
-<p><strong>git tag -a v1.2 9fceb02</strong> 对早先的某次提交加注标签（对版本号前几位是9fceb02的提交打上v1.2的标签）</p>
-<p><strong>git push origin [tagname]</strong> 分享标签（默认情况下，git push 并不会把标签传送到远端服务器上，只有通过显式命令才能分享标签到远端仓库。）<br><strong>git push origin –tags</strong> 一次推送所有本地新增的标签上去</p>
+        <h3 id="checkout"><a href="#checkout" class="headerlink" title="checkout"></a>checkout</h3><p><strong>svn checkout &lt;url&gt;</strong> 将文件checkout到本地，url是服务器上的目录<br><strong>svn co &lt;url&gt;</strong> 简写</p>
+<h3 id="添加文件"><a href="#添加文件" class="headerlink" title="添加文件"></a>添加文件</h3><p><strong>svn add &lt;file&gt;</strong> 将本地新文件添加到版本库<br><strong>svn add *.js</strong> 添加当前目录下所有js文件</p>
+<h3 id="提交代码"><a href="#提交代码" class="headerlink" title="提交代码"></a>提交代码</h3><p><strong>svn commit -m ‘***‘</strong> 提交改动的文件到版本库<br><strong>svn ci -m ‘***‘</strong> 简写<br><strong>svn ci &lt;path&gt; -m ‘***‘</strong> 只提交某个路径下的文件</p>
+<h3 id="更新文件"><a href="#更新文件" class="headerlink" title="更新文件"></a>更新文件</h3><p><strong>svn update -r m &lt;path&gt;</strong> 将某个路径下的本地文件还原到版本m<br><strong>svn update -r 200 test.js</strong> 将本地的文件test.js还原到版本200<br><strong>svn update</strong> 如果后面没有目录，默认将当前目录以及子目录下的所有文件都更新到最新版本。<br><strong>svn up</strong> 简写</p>
+<h3 id="查看文件或目录状态"><a href="#查看文件或目录状态" class="headerlink" title="查看文件或目录状态"></a>查看文件或目录状态</h3><p><strong>svn status &lt;path&gt;</strong> 查看目录下的文件和子目录的状态，正常状态不显示（?：不在svn的控制中；M：内容被修改；C：发生冲突；A：预定加入到版本库；K：被锁定）<br><strong>svn status -v &lt;path&gt;</strong> 显示文件和子目录状态（第一列保持相同，第二列显示工作版本号，第三和第四列显示最后一次修改的版本号和修改人）<br><strong>svn st</strong> 简写</p>
+<h3 id="创建纳入版本控制的新目录"><a href="#创建纳入版本控制的新目录" class="headerlink" title="创建纳入版本控制的新目录"></a>创建纳入版本控制的新目录</h3><p><strong>svn mkdir $URL/dir -m ‘***‘</strong> 工作空间或者版本库创建目录，产生提交</p>
+<h3 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h3><p><strong>svn delete &lt;path&gt; -m ‘***‘</strong> 删除某个路径下的文件并提交<br>相当于：<br><strong>svn delete &lt;path&gt;</strong><br><strong>svn ci -m ‘***‘</strong></p>
+<p><strong>svn mv &lt;path_old&gt; &lt;path_new&gt; -m ‘***‘</strong> 【mv=move  等价于svn cp 后svn delete】移动或拷贝工作空间或者版本库的文件/目录，也可用于文件改名</p>
+<p><strong>svn rm &lt;path&gt; -m ‘***‘</strong> 目录删除</p>
+<h3 id="查看信息"><a href="#查看信息" class="headerlink" title="查看信息"></a>查看信息</h3><p><strong>svn help &lt;command&gt;</strong> 获取子命令说明</p>
+<p><strong>svn log &lt;path&gt;</strong>  查看文件所有修改记录及版本号的变化<br><strong>svn log m:n</strong> 查看版本m到n的历史信息</p>
+<p><strong>svn info &lt;path&gt;</strong> 查看文件详细信息</p>
+<p><strong>svn list</strong> 显示给定目录在某一版本存在的文件（显示当前目录下svn记录文件列表，不访问版本库）<br><strong>svn list &lt;url&gt;</strong> 不下载到本地查看目录中的文件</p>
+<p><strong>svn cat</strong> 在屏幕打印某个文件特定版本内容<br><strong>svn cat -r m &lt;file&gt;</strong> 显示文件指定版本内容</p>
+<h3 id="拷贝"><a href="#拷贝" class="headerlink" title="拷贝"></a>拷贝</h3><p><strong>svn cp $URL1 $URL2 -m ‘***‘</strong> 工作拷贝或者版本库之间文件的相互拷贝<br>工作拷贝  -&gt; 工作拷贝  ：  复制和通过调度进行增加(包含历史)<br>工作拷贝  -&gt; 地址(URL) ： 马上提交一个工作拷贝到地址(URL)<br>地址(URL) -&gt;工作拷贝  ：  签出地址(URL)到工作目录，通过调度进行增加<br><strong>地址(URL) -&gt;地址(URL)</strong> ： 完全服务器端复制；一般用于<strong>分支</strong>和<strong>标签</strong></p>
+<h3 id="比较差异"><a href="#比较差异" class="headerlink" title="比较差异"></a>比较差异</h3><p><strong>svn diff &lt;path&gt;</strong> 将修改的文件与基础版本比较<br><strong>svn diff -r m &lt;file&gt;</strong> 比较本地工作拷贝与版本库指定版本<br><strong>svn diff -r m:n &lt;url&gt;</strong> 对版本m和版本n比较差异<br><strong>svn di</strong> 简写</p>
+<h3 id="合并"><a href="#合并" class="headerlink" title="合并"></a>合并</h3><p><strong>svn merge -r m:n &lt;path&gt;</strong> 从版本记录m和n之间的变化合并到当前工作目录中。<br>合并完成后再提交（ci）</p>
+<h3 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h3><p><strong>svn merge -r n:m &lt;path&gt;</strong><br>从高版本到低版本就是回退，从低版本到高版本增加记录。</p>
+<h3 id="恢复本地修改"><a href="#恢复本地修改" class="headerlink" title="恢复本地修改"></a>恢复本地修改</h3><p><strong>svn revert &lt;path&gt;</strong> 恢复对文件或者目录的修改，用于未执行提交操作(ci)之前，撤销本地修改。【本地操作，会丢失修改，慎用】<br>本子命令不会存取网络，并且会解除冲突的状况。但是它不会恢复被删除的目录.</p>
+<p>p.s. merge是已提交的代码回退，revert是没有提交的代码回退。</p>
+<h3 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h3><p><strong>svn resolved &lt;file&gt;</strong> 删除冲突标记，这条命令不会依语法来解决冲突或是移除冲突标记；它只是移除冲突的相关文件，然后让file可以再次提交。</p>
+<h3 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h3><p><strong>svn switch URL</strong> 更新工作副本至不同的URL<br><strong>switch URL[@PEGREV] [PATH]</strong> 更新工作副本，切换到同一版本库中的新 URL。其行为跟“svn update”很像，也是将工作副本切换到同一版本库中某个分支或者标签的方法。PEGREV 决定从哪个版本查找目标。<br><strong>switch –relocate FROM TO [PATH]</strong> 重写工作副本的 URL 元数据，以反映单纯的 URL 改变。当版本库的根 URL 改变(比如方案或者主机名称变动)，但是工作副本仍旧对应同一版本库的同一目录时，使用这个命令更新工作副本与档案库的对应关系。</p>
+<p>p.s. switch命令更多参考<a href="https://blog.csdn.net/jk110333/article/details/9301283" target="_blank" rel="noopener">这里</a></p>
 
       
     </div>
@@ -356,7 +369,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/git/" rel="tag"><i class="fa fa-tag"></i> git</a>
+            <a href="/tags/svn/" rel="tag"><i class="fa fa-tag"></i> svn</a>
           
         </div>
       
@@ -369,8 +382,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/05/git-command-2/" rel="next" title="git常用命令——远程仓库">
-                <i class="fa fa-chevron-left"></i> git常用命令——远程仓库
+              <a href="/git-command-4.html" rel="next" title="git常用命令——分支管理">
+                <i class="fa fa-chevron-left"></i> git常用命令——分支管理
               </a>
             
           </div>
@@ -378,10 +391,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/08/git-command-4/" rel="prev" title="git常用命令——分支管理">
-                git常用命令——分支管理 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -524,7 +533,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#打标签"><span class="nav-number">1.</span> <span class="nav-text">打标签</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#checkout"><span class="nav-number">1.</span> <span class="nav-text">checkout</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加文件"><span class="nav-number">2.</span> <span class="nav-text">添加文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提交代码"><span class="nav-number">3.</span> <span class="nav-text">提交代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更新文件"><span class="nav-number">4.</span> <span class="nav-text">更新文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看文件或目录状态"><span class="nav-number">5.</span> <span class="nav-text">查看文件或目录状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建纳入版本控制的新目录"><span class="nav-number">6.</span> <span class="nav-text">创建纳入版本控制的新目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除文件"><span class="nav-number">7.</span> <span class="nav-text">删除文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看信息"><span class="nav-number">8.</span> <span class="nav-text">查看信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拷贝"><span class="nav-number">9.</span> <span class="nav-text">拷贝</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#比较差异"><span class="nav-number">10.</span> <span class="nav-text">比较差异</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#合并"><span class="nav-number">11.</span> <span class="nav-text">合并</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#版本回退"><span class="nav-number">12.</span> <span class="nav-text">版本回退</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#恢复本地修改"><span class="nav-number">13.</span> <span class="nav-text">恢复本地修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决冲突"><span class="nav-number">14.</span> <span class="nav-text">解决冲突</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#切换分支"><span class="nav-number">15.</span> <span class="nav-text">切换分支</span></a></li></ol></div>
             
 
           </div>
