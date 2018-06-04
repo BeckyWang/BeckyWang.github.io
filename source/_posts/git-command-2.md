@@ -1,6 +1,6 @@
 ---
 title: git常用命令——远程仓库
-date: 2018-06-02 16:42:23
+date: 2018-05-05 16:42:23
 tags: [git]
 ---
 参考 [廖雪峰的网站](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000) 和 [这个网站](https://git-scm.com/book/zh/v1/%E8%B5%B7%E6%AD%A5)
