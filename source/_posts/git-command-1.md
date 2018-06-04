@@ -14,39 +14,39 @@ p.s. 所有的版本控制系统，其实只能跟踪文本文件的改动，比
 
 ## 本地仓库git常用命令
 ### 初始化
-git init 初始化一个git仓库
+**git init** 初始化一个git仓库
 
-git add &lt;file&gt; 暂存文件到暂存区
-git add . 暂存所有文件
+**git add &lt;file&gt;** 暂存文件到暂存区
+**git add .** 暂存所有文件
 
-git commit  -m '***' 提交文件到当前分支（本地仓库）
+**git commit  -m '\*\*\*'** 提交文件到当前分支（本地仓库）
 
 p.s. 建Git版本库时，Git自动为我们创建了唯一一个master分支，所以git commit就是往master分支上提交更改。
 每次修改，如果不用git add到暂存区，那就不会加到commit中。
 
 ### 查看状态
-git status 查看仓库当前的状态
+**git status** 查看仓库当前的状态
 
-git diff 查看difference
+**git diff** 查看difference
 
 ### 版本回退
-git log 显示从最近到最远的提交
-git log --pretty=online 简化输出信息
+**git log** 显示从最近到最远的提交
+**git log --pretty=online** 简化输出信息
 
-git reset --hard HEAD^ 回退到上一个版本
-git reset --hard &lt;commd-id&gt; 回到指定版本，版本号写几位就行
+**git reset --hard HEAD^** 回退到上一个版本
+**git reset --hard &lt;commd-id&gt;** 回到指定版本，版本号写几位就行
 
-git reflog 记录每一次命令
+**git reflog** 记录每一次命令
 
 p.s. $ cat &lt;file&gt; 查看文件详细信息
 
 ### 撤销修改
-git checkout -- &lt;file&gt; 丢弃工作区的修改，即让文件回到最近一次git commit或git add时的状态（没有--，就变成了“切换到另一个分支”的命令）
+**git checkout -- &lt;file&gt;** 丢弃工作区的修改，即让文件回到最近一次git commit或git add时的状态（没有--，就变成了“切换到另一个分支”的命令）
 
-git reset HEAD &lt;file> 把暂存区的修改撤销掉，重新放回工作区（HEAD表示最新的版本）
+**git reset HEAD &lt;file&gt;** 把暂存区的修改撤销掉，重新放回工作区（HEAD表示最新的版本）
 
 ### 删除文件
-$ rm &lt;file&gt; 本地（工作区）删除文件
+**$ rm &lt;file&gt;** 本地（工作区）删除文件
 
-git rm &lt;file&gt; + git commit
+**git rm &lt;file&gt;** + **git commit**
 从版本库（本地仓库）删除文件，然后提交
