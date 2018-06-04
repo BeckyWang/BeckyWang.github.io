@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next gemini use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -96,7 +96,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
+    scheme: 'Gemini',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -219,16 +219,6 @@
           </a>
         </li>
       
-        
-        <li class="menu-item menu-item-schedule">
-          <a href="/schedule/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
-            
-            日程表
-          </a>
-        </li>
-      
 
       
     </ul>
@@ -335,6 +325,7 @@
           
           更多参考 这个网站
 创建合并分支git checkout -b dev 创建dev分支，然后切换到dev分支（-b表示创建并切换），相当于：git branch devgit checkout dev
+git branch 查看当前分支（当前在dev上）git branch -v 查看各个分支最后一
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -462,7 +453,8 @@
           
           更多参考 这个网站
 打标签git tag 列出现有标签git tag -l ‘v1.4.2.*‘ 用特定的搜索模式列出符合条件的标签（只对 1.4.2 系列的版本感兴趣）
-git show v1.4 
+git show v1.4 查看相应标签的版本信息
+p.s. Git 使用的标签有两种类型：轻量级的（lightweight）和
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -591,7 +583,9 @@ git show v1.4
           参考 廖雪峰的网站 和 这个网站
 连接本地仓库和远程仓库
 创建SSH $ ssh-keygen -t rsa -C “email-address”
-登录远程仓库（github），添加 SSH KEY：
+登录远程仓库（github），添加 SSH KEY：在Key文本框里粘贴id_rsa.pub文件的内容。
+
+p.s. GitHub需要识别出你推送的提交
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -719,6 +713,7 @@ git show v1.4
           
           最近在学习git的使用，总结于廖雪峰的网站
 创建一个版本库$ mkdir &lt;repository-name&gt;$ cd &lt;repository-name&gt;$ pwd 显示当前目录
+p.s. 所有的版本控制系统，其实只能跟踪文本文件的改动，比如TXT文件，网页，所有的程序代码等等
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -844,7 +839,7 @@ git show v1.4
       
         
           
-          VScode常用插件：Auto Close Tag 自动闭合HTML标签Auto Import Typescript自动import提示Auto Rename Tag 修改HTML标签时，自动修改匹配
+          VScode常用插件：Auto Close Tag 自动闭合HTML标签Auto Import Typescript自动import提示Auto Rename Tag 修改HTML标签时，自动修改匹配的标签Beautify css/sass/scss/less css/sass/less格式化Bet
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1023,6 +1018,12 @@ git show v1.4
 
   
 
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
   
 </div>
 
