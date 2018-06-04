@@ -1,9 +1,9 @@
 ---
-title: about
+title: about me
 date: 2018-05-17 19:12:38
 ---
 
-<img src="../images/about_me.jpg" alt="这是帅气的我" style="height: 600px">
+<img src="../images/about_me.jpg" alt="这是帅气的我" style="height: 600px;margin-top: 10px;">
 
 ## 关于我
 - 一个学习前端知识的超级小菜鸟（求求你们别再学了，我真的跟不上了...）。

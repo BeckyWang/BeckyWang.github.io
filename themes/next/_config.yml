@@ -97,7 +97,7 @@ menu:
   tags: /tags/ || tags
   categories: /categories/ || th
   # archives: /archives/ || archive/
-  schedule: /schedule/ || calendar
+  # schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   # commonweal: /404/ || heartbeat
 
@@ -112,9 +112,9 @@ menu_icons:
 
 # Schemes
 # scheme: Muse
-#scheme: Mist
-scheme: Pisces
-#scheme: Gemini
+# scheme: Mist
+# scheme: Pisces
+scheme: Gemini
 
 
 # ---------------------------------------------------------------
@@ -219,7 +219,7 @@ excerpt_description: true
 # Please use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
   enable: true
-  length: 100
+  length: 150
 
 # Post meta display settings
 post_meta:
@@ -557,12 +557,12 @@ busuanzi_count:
   site_uv_header: <i class="fa fa-user"></i>
   site_uv_footer:
   # custom pv span for the whole site
-  site_pv: false
+  site_pv: true
   site_pv_header: <i class="fa fa-eye"></i>
   site_pv_footer:
   # custom pv span for one page only
   page_pv: true
-  page_pv_header: <i class="fa fa-file-o"></i>
+  page_pv_header: '阅读次数'
   page_pv_footer:
 
 
