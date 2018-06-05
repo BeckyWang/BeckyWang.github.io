@@ -72,7 +72,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="weinre," />
 
 
 
@@ -83,19 +83,24 @@
 
 
 
-<meta name="description" content="关于我 一个学习前端知识的超级小菜鸟（求求你们别再学了，我真的跟不上了…）。 减肥爱好者，几乎每天都喊着减肥，但是对各种好吃的又没有任何免疫力。 健身入门，喜欢跑步，健身操，瑜伽，动感单车。 韩综痴迷，喜欢刘大神和光洙。 科幻小说中度中毒，喜欢脑洞大但是又有理有据的想法。  希望我 能够在前端海洋里快乐地翱翔。 在减肥事业上小有成就。 读更多的书。 去更多的地方。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="about me">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta name="description" content="weinre简介 Weinre(Web Inspector Remote)是一款基于Web Inspector(Webkit)的远程调试工具，它使用JS编写，可以让我们在电脑上直接调试运行在手机上的远程页面。在PC上可以即时修改目标网页的HTML/CSS/Javascript，调试过程可实时显示移动设备上页面的预览效果，并同步显示设备页面的错误和警告信息，可以查看网络资源的信息，不过weinre不">
+<meta name="keywords" content="weinre">
+<meta property="og:type" content="article">
+<meta property="og:title" content="weinre使用教程">
+<meta property="og:url" content="http://yoursite.com/weinre-tutorial.html">
 <meta property="og:site_name" content="今晚月色很美">
-<meta property="og:description" content="关于我 一个学习前端知识的超级小菜鸟（求求你们别再学了，我真的跟不上了…）。 减肥爱好者，几乎每天都喊着减肥，但是对各种好吃的又没有任何免疫力。 健身入门，喜欢跑步，健身操，瑜伽，动感单车。 韩综痴迷，喜欢刘大神和光洙。 科幻小说中度中毒，喜欢脑洞大但是又有理有据的想法。  希望我 能够在前端海洋里快乐地翱翔。 在减肥事业上小有成就。 读更多的书。 去更多的地方。">
+<meta property="og:description" content="weinre简介 Weinre(Web Inspector Remote)是一款基于Web Inspector(Webkit)的远程调试工具，它使用JS编写，可以让我们在电脑上直接调试运行在手机上的远程页面。在PC上可以即时修改目标网页的HTML/CSS/Javascript，调试过程可实时显示移动设备上页面的预览效果，并同步显示设备页面的错误和警告信息，可以查看网络资源的信息，不过weinre不">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/images/about_me.jpg">
-<meta property="og:updated_time" content="2018-06-04T02:02:31.505Z">
+<meta property="og:image" content="http://yoursite.com/weinre-tutorial/success.png">
+<meta property="og:image" content="http://yoursite.com/weinre-tutorial/home.png">
+<meta property="og:image" content="http://yoursite.com/weinre-tutorial/remote.png">
+<meta property="og:image" content="http://yoursite.com/weinre-tutorial/remote-success.png">
+<meta property="og:image" content="http://yoursite.com/weinre-tutorial/elements.png">
+<meta property="og:updated_time" content="2018-06-05T03:10:42.093Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about me">
-<meta name="twitter:description" content="关于我 一个学习前端知识的超级小菜鸟（求求你们别再学了，我真的跟不上了…）。 减肥爱好者，几乎每天都喊着减肥，但是对各种好吃的又没有任何免疫力。 健身入门，喜欢跑步，健身操，瑜伽，动感单车。 韩综痴迷，喜欢刘大神和光洙。 科幻小说中度中毒，喜欢脑洞大但是又有理有据的想法。  希望我 能够在前端海洋里快乐地翱翔。 在减肥事业上小有成就。 读更多的书。 去更多的地方。">
-<meta name="twitter:image" content="http://yoursite.com/images/about_me.jpg">
+<meta name="twitter:title" content="weinre使用教程">
+<meta name="twitter:description" content="weinre简介 Weinre(Web Inspector Remote)是一款基于Web Inspector(Webkit)的远程调试工具，它使用JS编写，可以让我们在电脑上直接调试运行在手机上的远程页面。在PC上可以即时修改目标网页的HTML/CSS/Javascript，调试过程可实时显示移动设备上页面的预览效果，并同步显示设备页面的错误和警告信息，可以查看网络资源的信息，不过weinre不">
+<meta name="twitter:image" content="http://yoursite.com/weinre-tutorial/success.png">
 
 
 
@@ -125,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/about/"/>
+  <link rel="canonical" href="http://yoursite.com/weinre-tutorial.html"/>
 
 
 
 
 
-  <title>about me | 今晚月色很美</title>
+  <title>weinre使用教程 | 今晚月色很美</title>
   
 
 
@@ -246,47 +251,172 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/weinre-tutorial.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="BeckyWang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="今晚月色很美">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">about me</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <p><img src="/about/../images/about_me.jpg" alt="这是帅气的我" style="height: 600px;margin-top: 10px;"></p>
-<h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><ul>
-<li>一个学习前端知识的超级小菜鸟（求求你们别再学了，我真的跟不上了…）。</li>
-<li>减肥爱好者，几乎每天都喊着减肥，但是对各种好吃的又没有任何免疫力。</li>
-<li>健身入门，喜欢跑步，健身操，瑜伽，动感单车。</li>
-<li>韩综痴迷，喜欢刘大神和光洙。</li>
-<li>科幻小说中度中毒，喜欢脑洞大但是又有理有据的想法。</li>
-</ul>
-<h2 id="希望我"><a href="#希望我" class="headerlink" title="希望我"></a>希望我</h2><ul>
-<li>能够在前端海洋里快乐地翱翔。</li>
-<li>在减肥事业上小有成就。</li>
-<li>读更多的书。</li>
-<li>去更多的地方。</li>
-</ul>
-
+          <h1 class="post-title" itemprop="name headline">weinre使用教程</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-05T10:16:07+08:00">
+                2018-06-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">阅读次数
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h2 id="weinre简介"><a href="#weinre简介" class="headerlink" title="weinre简介"></a>weinre简介</h2><p> Weinre(Web Inspector Remote)是一款基于Web Inspector(Webkit)的远程调试工具，它使用JS编写，可以让我们在电脑上直接调试运行在手机上的远程页面。<br>在PC上可以即时修改目标网页的HTML/CSS/Javascript，调试过程可实时显示移动设备上页面的预览效果，并同步显示设备页面的错误和警告信息，可以查看网络资源的信息，不过<strong>weinre不支持断点调试</strong>。</p>
+<h2 id="weinre的使用"><a href="#weinre的使用" class="headerlink" title="weinre的使用"></a>weinre的使用</h2><h3 id="安装及运行"><a href="#安装及运行" class="headerlink" title="安装及运行"></a>安装及运行</h3><pre><code>npm install -g weinre
+</code></pre><p>测试是否安装成功，命令行输入：weinre，回车，开启服务。<br>若运行成功，输出：<br><img src="/weinre-tutorial/success.png" alt="运行成功"></p>
+<p>注意，虽然这样是运行成功了，但是这样操作只能在PC的浏览器通过<a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a>访问，将localhost换做本地ip就无法打开Weinre调试工具，为了能在其他设备以及本地设备用ip打开Weinre调试工具，需要输入：</p>
+<pre><code>weinre --boundHost -all-
+</code></pre><p>上面默认的是8080端口，weinre还有其他参数：    </p>
+<pre><code>weinre --boundHost [hostname | ip address |-all-]  --httpPort [port]
+</code></pre><p>ip address可以是你的电脑的ip地址，port是自定义端口号。<br>运行成功后，在PC浏览器输入：http://&lt;你的电脑IP地址&gt;:8080，浏览器显示页面如下：<br><img src="/weinre-tutorial/home.png" alt="运行页面" style="width: 600px"></p>
+<p>红框中的地址是Debug Client(Weinre调试工具)的用户访问接口，可以通过这个地址进入Debug Client。<br>蓝框是Target Script，这个地址是系统根据我们启动Weinre服务时的参数设置生成的target-script.js文件的链接地址。我们需要将这个js文件嵌入到待测试的页面中。要注意的是不要使用localhost:8080打开Weinre服务，否则生成的TargetScript链接也以localhost开头，这样直接复制到手机，就无法获取到文件了。</p>
+<h3 id="移动端连接"><a href="#移动端连接" class="headerlink" title="移动端连接"></a>移动端连接</h3><p>点开Debug Client的链接，显示页面：<br><img src="/weinre-tutorial/remote.png" alt="remote"></p>
+<p>首先将上一步的Target Script嵌入测试页面底部，然后将测试文件放在staticWebDir目录下（红框标出的，staticWebDir的目录即是你安装weinre的根目录）。<br>例如我的测试页面是index.html，放在staticWebDir目录下，手机打开浏览器输入<a href="http://192.168.88.55:8080/index.html" target="_blank" rel="noopener">http://192.168.88.55:8080/index.html</a>，大功告成，手机可以看到测试页面。</p>
+<h3 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h3><p>在进入调试步骤前，要确保我们选中正确的Targets，PC浏览器remote面板显示如下图，选择待调试设备的ip，选中会显示绿色：<br><img src="/weinre-tutorial/remote-success.png" alt="remote-success"></p>
+<ol>
+<li><p>调试DOM/CSS<br>切换至ElementsTab，可以看到调试页面的html结构, 在这里我们就可以像调试本地页面一样的修改这个文件,可以修改DOM结构也可以修改元素样式。<br><img src="/weinre-tutorial/elements.png" alt="elements"></p>
+</li>
+<li><p>调试ajax请求<br>切换至NetworkTab, 在这里可以看到我们发送的ajax请求。<br>这个与我们平时调试本地页面一样，不同的只是这里不能显示页面加载资源的情况，比如页面中引入的js, css, img文件的加载情况，所以如果资源加载错误， 在这里是无法看出来的。 </p>
+</li>
+<li><p>本地存储<br>切换至ResourcesTab，这是对应本地调试工具的一个缩减版，可以看到只有Database, Local Storage与Session Storage三项。</p>
+</li>
+<li><p>console面板<br>切换至ConsoleTab，这里基本与本地调试时console的功能一致，可以输入执行一些js代码，也可以显示console输出的信息。</p>
+</li>
+</ol>
+<p><strong>p.s.</strong> Ajax请求与Console的输出要发生在Target连接成功之后才能看到结果。</p>
+<p>更多请参考<a href="https://github.com/nupthale/weinre" target="_blank" rel="noopener">这里</a>。</p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/weinre/" rel="tag"><i class="fa fa-tag"></i> weinre</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/mac-svn-command.html" rel="next" title="mac终端下svn常用命令">
+                <i class="fa fa-chevron-left"></i> mac终端下svn常用命令
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -410,7 +540,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于我"><span class="nav-number">1.</span> <span class="nav-text">关于我</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#希望我"><span class="nav-number">2.</span> <span class="nav-text">希望我</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#weinre简介"><span class="nav-number">1.</span> <span class="nav-text">weinre简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#weinre的使用"><span class="nav-number">2.</span> <span class="nav-text">weinre的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装及运行"><span class="nav-number">2.1.</span> <span class="nav-text">安装及运行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#移动端连接"><span class="nav-number">2.2.</span> <span class="nav-text">移动端连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#调试"><span class="nav-number">2.3.</span> <span class="nav-text">调试</span></a></li></ol></li></ol></div>
             
 
           </div>
