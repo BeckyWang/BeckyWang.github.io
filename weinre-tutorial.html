@@ -83,23 +83,23 @@
 
 
 
-<meta name="description" content="weinre简介 Weinre(Web Inspector Remote)是一款基于Web Inspector(Webkit)的远程调试工具，它使用JS编写，可以让我们在电脑上直接调试运行在手机上的远程页面。在PC上可以即时修改目标网页的HTML/CSS/Javascript，调试过程可实时显示移动设备上页面的预览效果，并同步显示设备页面的错误和警告信息，可以查看网络资源的信息，不过weinre不">
+<meta name="description" content="weinre简介Weinre(Web Inspector Remote)是一款基于Web Inspector(Webkit)的远程调试工具，它使用JS编写，可以让我们在电脑上直接调试运行在手机上的远程页面。在PC上可以即时修改目标网页的HTML/CSS/Javascript，调试过程可实时显示移动设备上页面的预览效果，并同步显示设备页面的错误和警告信息，可以查看网络资源的信息，不过weinre不支">
 <meta name="keywords" content="weinre">
 <meta property="og:type" content="article">
 <meta property="og:title" content="weinre使用教程">
 <meta property="og:url" content="http://yoursite.com/weinre-tutorial.html">
 <meta property="og:site_name" content="今晚月色很美">
-<meta property="og:description" content="weinre简介 Weinre(Web Inspector Remote)是一款基于Web Inspector(Webkit)的远程调试工具，它使用JS编写，可以让我们在电脑上直接调试运行在手机上的远程页面。在PC上可以即时修改目标网页的HTML/CSS/Javascript，调试过程可实时显示移动设备上页面的预览效果，并同步显示设备页面的错误和警告信息，可以查看网络资源的信息，不过weinre不">
+<meta property="og:description" content="weinre简介Weinre(Web Inspector Remote)是一款基于Web Inspector(Webkit)的远程调试工具，它使用JS编写，可以让我们在电脑上直接调试运行在手机上的远程页面。在PC上可以即时修改目标网页的HTML/CSS/Javascript，调试过程可实时显示移动设备上页面的预览效果，并同步显示设备页面的错误和警告信息，可以查看网络资源的信息，不过weinre不支">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/weinre-tutorial/success.png">
 <meta property="og:image" content="http://yoursite.com/weinre-tutorial/home.png">
 <meta property="og:image" content="http://yoursite.com/weinre-tutorial/remote.png">
 <meta property="og:image" content="http://yoursite.com/weinre-tutorial/remote-success.png">
 <meta property="og:image" content="http://yoursite.com/weinre-tutorial/elements.png">
-<meta property="og:updated_time" content="2018-06-05T03:10:42.093Z">
+<meta property="og:updated_time" content="2018-06-06T02:20:54.365Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="weinre使用教程">
-<meta name="twitter:description" content="weinre简介 Weinre(Web Inspector Remote)是一款基于Web Inspector(Webkit)的远程调试工具，它使用JS编写，可以让我们在电脑上直接调试运行在手机上的远程页面。在PC上可以即时修改目标网页的HTML/CSS/Javascript，调试过程可实时显示移动设备上页面的预览效果，并同步显示设备页面的错误和警告信息，可以查看网络资源的信息，不过weinre不">
+<meta name="twitter:description" content="weinre简介Weinre(Web Inspector Remote)是一款基于Web Inspector(Webkit)的远程调试工具，它使用JS编写，可以让我们在电脑上直接调试运行在手机上的远程页面。在PC上可以即时修改目标网页的HTML/CSS/Javascript，调试过程可实时显示移动设备上页面的预览效果，并同步显示设备页面的错误和警告信息，可以查看网络资源的信息，不过weinre不支">
 <meta name="twitter:image" content="http://yoursite.com/weinre-tutorial/success.png">
 
 
@@ -335,7 +335,7 @@
       
 
       
-        <h2 id="weinre简介"><a href="#weinre简介" class="headerlink" title="weinre简介"></a>weinre简介</h2><p> Weinre(Web Inspector Remote)是一款基于Web Inspector(Webkit)的远程调试工具，它使用JS编写，可以让我们在电脑上直接调试运行在手机上的远程页面。<br>在PC上可以即时修改目标网页的HTML/CSS/Javascript，调试过程可实时显示移动设备上页面的预览效果，并同步显示设备页面的错误和警告信息，可以查看网络资源的信息，不过<strong>weinre不支持断点调试</strong>。</p>
+        <h2 id="weinre简介"><a href="#weinre简介" class="headerlink" title="weinre简介"></a>weinre简介</h2><p>Weinre(Web Inspector Remote)是一款基于Web Inspector(Webkit)的远程调试工具，它使用JS编写，可以让我们在电脑上直接调试运行在手机上的远程页面。<br>在PC上可以即时修改目标网页的HTML/CSS/Javascript，调试过程可实时显示移动设备上页面的预览效果，并同步显示设备页面的错误和警告信息，可以查看网络资源的信息，不过<strong>weinre不支持断点调试</strong>。</p>
 <h2 id="weinre的使用"><a href="#weinre的使用" class="headerlink" title="weinre的使用"></a>weinre的使用</h2><h3 id="安装及运行"><a href="#安装及运行" class="headerlink" title="安装及运行"></a>安装及运行</h3><pre><code>npm install -g weinre
 </code></pre><p>测试是否安装成功，命令行输入：weinre，回车，开启服务。<br>若运行成功，输出：<br><img src="/weinre-tutorial/success.png" alt="运行成功"></p>
 <p>注意，虽然这样是运行成功了，但是这样操作只能在PC的浏览器通过<a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a>访问，将localhost换做本地ip就无法打开Weinre调试工具，为了能在其他设备以及本地设备用ip打开Weinre调试工具，需要输入：</p>
@@ -389,8 +389,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/mac-svn-command.html" rel="next" title="mac终端下svn常用命令">
-                <i class="fa fa-chevron-left"></i> mac终端下svn常用命令
+              <a href="/git-command-4.html" rel="next" title="git常用命令——分支管理">
+                <i class="fa fa-chevron-left"></i> git常用命令——分支管理
               </a>
             
           </div>
@@ -478,7 +478,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
