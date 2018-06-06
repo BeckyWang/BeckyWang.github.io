@@ -5,7 +5,7 @@ tags: [weinre]
 ---
 ## weinre简介
 
- Weinre(Web Inspector Remote)是一款基于Web Inspector(Webkit)的远程调试工具，它使用JS编写，可以让我们在电脑上直接调试运行在手机上的远程页面。
+Weinre(Web Inspector Remote)是一款基于Web Inspector(Webkit)的远程调试工具，它使用JS编写，可以让我们在电脑上直接调试运行在手机上的远程页面。
 在PC上可以即时修改目标网页的HTML/CSS/Javascript，调试过程可实时显示移动设备上页面的预览效果，并同步显示设备页面的错误和警告信息，可以查看网络资源的信息，不过**weinre不支持断点调试**。
 
 ## weinre的使用

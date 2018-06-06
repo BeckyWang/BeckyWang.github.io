@@ -1,6 +1,6 @@
 ---
 title: No module named bz2错误解决方法
-date: 2018-04-17 17:19:15
+date: 2018-05-12 17:19:15
 tags: [python]
 ---
 最近在学机器学习，想跑一些demo，运行过程中报的错。
