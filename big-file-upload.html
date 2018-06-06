@@ -72,7 +72,7 @@
 
 
 
-  <meta name="keywords" content="git," />
+  <meta name="keywords" content="文件上传,html," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="更多参考 这个网站 创建合并分支git checkout -b dev 创建dev分支，然后切换到dev分支（-b表示创建并切换），相当于：git branch devgit checkout dev git branch 查看当前分支（当前在dev上）git branch -v 查看各个分支最后一个提交对象的信息git branch –merged 查看哪些分支已被并入当前分支（也就是说哪些分支">
-<meta name="keywords" content="git">
+<meta name="description" content="浏览器的兼容性为了考虑最大的兼容性，目前WebUpload同时实现了 HTML5 和 FLASH 两套运行时，在不支持 HTML5 的浏览器里面自动切换成 FLASH 方式上传，这样的好处是，既能在条件允许的情况保证 HTML5 发挥出其高效的优势，又能在不支持 HTML5 的浏览器里面保证能正常运行。 p.s. WebUploader是由Baidu FEX团队开发的一个简单的以HTML5为主，F">
+<meta name="keywords" content="文件上传,html">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git常用命令——分支管理">
-<meta property="og:url" content="http://yoursite.com/git-command-4.html">
+<meta property="og:title" content="大文件上传概述">
+<meta property="og:url" content="http://yoursite.com/big-file-upload.html">
 <meta property="og:site_name" content="今晚月色很美">
-<meta property="og:description" content="更多参考 这个网站 创建合并分支git checkout -b dev 创建dev分支，然后切换到dev分支（-b表示创建并切换），相当于：git branch devgit checkout dev git branch 查看当前分支（当前在dev上）git branch -v 查看各个分支最后一个提交对象的信息git branch –merged 查看哪些分支已被并入当前分支（也就是说哪些分支">
+<meta property="og:description" content="浏览器的兼容性为了考虑最大的兼容性，目前WebUpload同时实现了 HTML5 和 FLASH 两套运行时，在不支持 HTML5 的浏览器里面自动切换成 FLASH 方式上传，这样的好处是，既能在条件允许的情况保证 HTML5 发挥出其高效的优势，又能在不支持 HTML5 的浏览器里面保证能正常运行。 p.s. WebUploader是由Baidu FEX团队开发的一个简单的以HTML5为主，F">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-06T02:20:28.400Z">
+<meta property="og:updated_time" content="2018-06-06T03:32:20.491Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git常用命令——分支管理">
-<meta name="twitter:description" content="更多参考 这个网站 创建合并分支git checkout -b dev 创建dev分支，然后切换到dev分支（-b表示创建并切换），相当于：git branch devgit checkout dev git branch 查看当前分支（当前在dev上）git branch -v 查看各个分支最后一个提交对象的信息git branch –merged 查看哪些分支已被并入当前分支（也就是说哪些分支">
+<meta name="twitter:title" content="大文件上传概述">
+<meta name="twitter:description" content="浏览器的兼容性为了考虑最大的兼容性，目前WebUpload同时实现了 HTML5 和 FLASH 两套运行时，在不支持 HTML5 的浏览器里面自动切换成 FLASH 方式上传，这样的好处是，既能在条件允许的情况保证 HTML5 发挥出其高效的优势，又能在不支持 HTML5 的浏览器里面保证能正常运行。 p.s. WebUploader是由Baidu FEX团队开发的一个简单的以HTML5为主，F">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/git-command-4.html"/>
+  <link rel="canonical" href="http://yoursite.com/big-file-upload.html"/>
 
 
 
 
 
-  <title>git常用命令——分支管理 | 今晚月色很美</title>
+  <title>大文件上传概述 | 今晚月色很美</title>
   
 
 
@@ -257,7 +257,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/git-command-4.html">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/big-file-upload.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="BeckyWang">
@@ -274,7 +274,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">git常用命令——分支管理</h1>
+          <h1 class="post-title" itemprop="name headline">大文件上传概述</h1>
         
 
         <div class="post-meta">
@@ -286,8 +286,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-03T09:28:03+08:00">
-                2018-06-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-06T11:19:22+08:00">
+                2018-05-06
               </time>
             
 
@@ -329,30 +329,39 @@
       
 
       
-        <p>更多参考 <a href="https://git-scm.com/book/zh/v1/Git-%E5%88%86%E6%94%AF" target="_blank" rel="noopener">这个网站</a></p>
-<h2 id="创建合并分支"><a href="#创建合并分支" class="headerlink" title="创建合并分支"></a>创建合并分支</h2><p><strong>git checkout -b dev</strong> 创建dev分支，然后切换到dev分支（-b表示创建并切换），相当于：<br><strong>git branch dev</strong><br><strong>git checkout dev</strong></p>
-<p><strong>git branch</strong> 查看当前分支（当前在dev上）<br><strong>git branch -v</strong> 查看各个分支最后一个提交对象的信息<br><strong>git branch –merged</strong> 查看哪些分支已被并入当前分支（也就是说哪些分支是当前分支的直接上游，所以列出来且没有*的分支可以直接删除）<br><strong>git branch –no-merged</strong> 查看尚未合并的工作（由于这些分支中还包含着尚未合并进来的工作成果，所以简单地用 git branch -d 删除该分支会提示错误，因为那样做会丢失数据，可以用大写的删除选项 -D 强制执行）</p>
-<p><strong>git checkout master</strong> 切换分支（切换到master上）</p>
-<p><strong>git merge dev</strong> 合并指定分支到当前分支（把dev分支的工作成果合并到master分支上，Fast-forward模式）</p>
-<p><strong>git branch -d dev</strong> 删除dev分支</p>
-<p><strong>git log –graph</strong> 查看分支合并图</p>
-<p>p.s. 解决冲突：当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。<br>解决冲突就是把Git合并失败的文件手动编辑为我们希望的内容，再提交。</p>
-<p><strong>git merge –no-ff -m “merge with no-ff” dev</strong> 以禁用ff的模式合并dev分支（本次合并要创建一个新的commit，所以加上-m参数，把commit描述写进去。）</p>
-<p>p.s. 通常，合并分支时，如果可能，Git会用Fast forward模式，但这种模式下，删除分支后，会丢掉分支信息。<br>如果要强制禁用Fast forward模式，Git就会在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息。</p>
-<h2 id="远程分支"><a href="#远程分支" class="headerlink" title="远程分支"></a>远程分支</h2><p>远程分支（remote branch）是对远程仓库中的分支的索引。<br>它们是一些无法移动的本地分支；只有在 Git 进行网络交互时才会更新。<br>远程分支就像是书签，提醒着你上次连接远程仓库时上面各分支的位置。</p>
-<p>用 (远程仓库名)/(分支名) 这样的形式表示远程分支。</p>
-<p><strong>git push &lt;远程主机名&gt; &lt;本地分支名&gt;:&lt;远程分支名&gt;</strong> 推送本地分支<br>git push origin serverfix 取出我在本地的 serverfix 分支，推送到远程仓库的 serverfix 分支中去</p>
-<p>p.s. 对于无意分享的分支，你尽管保留为私人分支好了，而只推送那些协同工作要用到的特性分支.<br>推送本地分之后，当你的协作者再次从服务器上获取数据时（fetch），他们将得到一个新的远程分支 origin/serverfix，并指向服务器上 serverfix 所指向的版本。<br>在 fetch 操作下载好新的远程分支之后，你仍然无法在本地编辑该远程仓库中的分支。换句话说，在本例中，你不会有一个新的 serverfix 分支，有的只是一个你无法移动的 origin/serverfix 指针。</p>
-<p><strong>git checkout -b serverfix origin/serverfix</strong> 切换到新建的 serverfix 本地分支，其内容同远程分支 origin/serverfix 一致</p>
-<p>p.s. 上述操作会在远程分支的基础上分化出一个新的分支。<br>如果要把该远程分支的内容合并到当前分支，可以运行 git merge origin/serverfix。</p>
-<p>从远程分支 checkout 出来的本地分支，称为 跟踪分支 (tracking branch)。跟踪分支是一种和某个远程分支有直接联系的本地分支。在跟踪分支里输入 git push，Git 会自行推断应该向哪个服务器的哪个分支推送数据。同样，在这些分支里运行 git pull 会获取所有远程索引，并把它们的数据都合并到本地分支中来。</p>
-<p><strong>git checkout –track origin/serverfix</strong> 跟踪远程分支（同上一条命令），简化版本（git 1.6.2以上版本）</p>
-<p><strong>git push &lt;远程主机名&gt; :&lt;远程分支名&gt;</strong> 删除远程分支</p>
-<p><strong>git branch –set-upstream &lt;branch-name&gt; origin/&lt;branch-name&gt;</strong>  建立本地分支和远程分支的关联</p>
-<h2 id="分支的变基"><a href="#分支的变基" class="headerlink" title="分支的变基"></a>分支的变基</h2><p>p.s. rebase操作可以把本地未push的分叉提交历史整理成直线。<br>使用变基的目的，是想要得到一个能在远程分支上干净应用的补丁。</p>
-<p><strong>git checkout a_branch</strong><br><strong>git rebase b_branch</strong> a_branch是要进行变基的分支，b_branch是基地分支，即改写a_branch的提交历史，使它成为b_branch的直接下游。</p>
-<p><strong>git rebase [主分支-基底] [特性分支]</strong> 将特性分支变基到主分支上</p>
-<p><strong>p.s. 一旦分支中的提交对象发布到公共仓库，就千万不要对该分支进行变基操作。</strong></p>
+        <h2 id="浏览器的兼容性"><a href="#浏览器的兼容性" class="headerlink" title="浏览器的兼容性"></a>浏览器的兼容性</h2><p>为了考虑最大的兼容性，目前WebUpload同时实现了 HTML5 和 FLASH 两套运行时，在不支持 HTML5 的浏览器里面自动切换成 FLASH 方式上传，这样的好处是，既能在条件允许的情况保证 HTML5 发挥出其高效的优势，又能在不支持 HTML5 的浏览器里面保证能正常运行。</p>
+<p>p.s. <a href="http://fex.baidu.com/webuploader/" target="_blank" rel="noopener">WebUploader</a>是由Baidu FEX团队开发的一个简单的以HTML5为主，FLASH为辅的现代文件上传组件。</p>
+<h2 id="如何优化文件上传性能"><a href="#如何优化文件上传性能" class="headerlink" title="如何优化文件上传性能"></a>如何优化文件上传性能</h2><h3 id="上传前的优化"><a href="#上传前的优化" class="headerlink" title="上传前的优化"></a>上传前的优化</h3><ul>
+<li>通过减少文件体积，减少上传流量来优化。</li>
+<li>通过合并小文件，减少请求数来优化。</li>
+</ul>
+<h3 id="上传过程中优化"><a href="#上传过程中优化" class="headerlink" title="上传过程中优化"></a>上传过程中优化</h3><ol>
+<li><p>并发上传<br> 并发数越多，服务端压力越大，所以选择并发数不能太大！<br> 同时每个浏览器都有固定的最大并发数限制，所以选择并发数不能超出这个值。</p>
+</li>
+<li><p>分块上传<br>分块上传，就是把一个大的文件分成若干块，一块一块的传输。</p>
+<p> 优点：</p>
+</li>
+</ol>
+<ul>
+<li>更强容错能力：如果传输中断，仅需重传出错的分片，而不需要重传整个文件，大大减少了重传开销。</li>
+<li>可以模拟暂停与继续：采用分块上传，在某个分块上传完了后不自动开始下个分块上传，利用此功能，就可以通过网络检测，在网络断开的时候自动暂停传输，网络恢复后，继续传输，给用户带来更好的体验效果。</li>
+<li>利用并发提速：如果单独的上传一个大文件，只有采用了分块上传才能利用并发请求来提速。</li>
+<li>更精准的速度跟踪：关于客户端监控上传进度，其实监控的都是客户端的发送速度，服务端有没有接收，有没有存储，是不知道的，只有在整个请求完毕，收到服务端反馈后才能确定数据已经成功接收。这样也就解释了进度显示的时候，长长出现，进度条瞬间到100%，要过一段时间才全部完成。如果采用分块上传，每个分块上传完成，可以确定这个分块服务端已经成功接收。</li>
+</ul>
+<ol start="3">
+<li><p>断点续传<br>如果服务端能够把每个已成功上传的分块都记住，客户端可以快速验证，条件选择跳过某个分块，就实现了断点续传。</p>
+<p> 优点：</p>
+</li>
+</ol>
+<ul>
+<li>节省流量，避免上传重复的分块。</li>
+<li>减少用户等待时间。</li>
+<li>可恢复的上传。出现中断，就算浏览器刷新或者是换了台电脑也能恢复到上次中断的位置。</li>
+</ul>
+<ol start="4">
+<li>如何标识一个分块：<br>怎样标识让服务端好入库，同时客户端可以快速的计算出来与服务端验证，换句话说就是，如何去找出分块的唯一ID。<br>每次分块上传前，根据内容 MD5序列化，得到一个唯一ID，与服务端验证，如果此分块已经存在于服务端，则直接跳过此分块上传，否则上传此分块，成功后，服务端记下此分块ID。</li>
+</ol>
+<p>参考网站 <a href="http://www.zuidaima.com/blog/2819949848316928.html" target="_blank" rel="noopener">http://www.zuidaima.com/blog/2819949848316928.html</a></p>
 
       
     </div>
@@ -370,7 +379,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/git/" rel="tag"><i class="fa fa-tag"></i> git</a>
+            <a href="/tags/文件上传/" rel="tag"><i class="fa fa-tag"></i> 文件上传</a>
+          
+            <a href="/tags/html/" rel="tag"><i class="fa fa-tag"></i> html</a>
           
         </div>
       
@@ -383,18 +394,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/git-command-3.html" rel="next" title="git常用命令——打标签">
-                <i class="fa fa-chevron-left"></i> git常用命令——打标签
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/weinre-tutorial.html" rel="prev" title="weinre使用教程">
-                weinre使用教程 <i class="fa fa-chevron-right"></i>
+              <a href="/python-bz2-error-1.html" rel="prev" title="No module named bz2错误解决方法">
+                No module named bz2错误解决方法 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -538,7 +545,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建合并分支"><span class="nav-number">1.</span> <span class="nav-text">创建合并分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#远程分支"><span class="nav-number">2.</span> <span class="nav-text">远程分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分支的变基"><span class="nav-number">3.</span> <span class="nav-text">分支的变基</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#浏览器的兼容性"><span class="nav-number">1.</span> <span class="nav-text">浏览器的兼容性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何优化文件上传性能"><span class="nav-number">2.</span> <span class="nav-text">如何优化文件上传性能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#上传前的优化"><span class="nav-number">2.1.</span> <span class="nav-text">上传前的优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上传过程中优化"><span class="nav-number">2.2.</span> <span class="nav-text">上传过程中优化</span></a></li></ol></li></ol></div>
             
 
           </div>
