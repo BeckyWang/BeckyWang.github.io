@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="e_qCquDa463mtD8DRDjvZPPe2yJ0bjXAz_jj79kaz0M" />
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="LQMMtIjEz0" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="html,阻尼效果," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="功能描述 要求  页面分为AB两个区域 当手机可视区的底部接触到 “阻尼带” 的时候，有个上拉弹性过程  当上拉到一定阈值程度就直接把B区顶部弹到手机可视区的顶部，让可视区从B区开始显示 当上拉程度未到阈值，就回弹复原   当手机可视区从B区向上滚动时候，B区顶部接触带“阻尼带”，有个下拉弹性过程  当下拉到一定阈值程度就直接把A区底部弹到手机可视区的底部，让可视区从A区底部向上开始显示 当下拉程">
+<meta name="keywords" content="html,阻尼效果">
+<meta property="og:type" content="article">
+<meta property="og:title" content="H5页面滚动阻尼效果实现">
+<meta property="og:url" content="http://yoursite.com/h5-damping-effect.html">
+<meta property="og:site_name" content="今晚月色很美">
+<meta property="og:description" content="功能描述 要求  页面分为AB两个区域 当手机可视区的底部接触到 “阻尼带” 的时候，有个上拉弹性过程  当上拉到一定阈值程度就直接把B区顶部弹到手机可视区的顶部，让可视区从B区开始显示 当上拉程度未到阈值，就回弹复原   当手机可视区从B区向上滚动时候，B区顶部接触带“阻尼带”，有个下拉弹性过程  当下拉到一定阈值程度就直接把A区底部弹到手机可视区的底部，让可视区从A区底部向上开始显示 当下拉程">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/h5-damping-effect/damping.png">
+<meta property="og:image" content="http://yoursite.com/h5-damping-effect/bug.GIF">
+<meta property="og:image" content="http://yoursite.com/h5-damping-effect/last_effect.GIF">
+<meta property="og:updated_time" content="2018-06-14T13:28:58.297Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="H5页面滚动阻尼效果实现">
+<meta name="twitter:description" content="功能描述 要求  页面分为AB两个区域 当手机可视区的底部接触到 “阻尼带” 的时候，有个上拉弹性过程  当上拉到一定阈值程度就直接把B区顶部弹到手机可视区的顶部，让可视区从B区开始显示 当上拉程度未到阈值，就回弹复原   当手机可视区从B区向上滚动时候，B区顶部接触带“阻尼带”，有个下拉弹性过程  当下拉到一定阈值程度就直接把A区底部弹到手机可视区的底部，让可视区从A区底部向上开始显示 当下拉程">
+<meta name="twitter:image" content="http://yoursite.com/h5-damping-effect/damping.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/h5-damping-effect.html"/>
+
+
+
+
+
+  <title>H5页面滚动阻尼效果实现 | 今晚月色很美</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">今晚月色很美</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/h5-damping-effect.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="BeckyWang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="今晚月色很美">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">H5页面滚动阻尼效果实现</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-14T21:14:17+08:00">
+                2018-06-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">阅读次数
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="功能描述"><a href="#功能描述" class="headerlink" title="功能描述"></a>功能描述</h2><ul>
+<li><p>要求</p>
+<ul>
+<li>页面分为AB两个区域</li>
+<li><p>当手机可视区的底部接触到 “阻尼带” 的时候，有个上拉弹性过程</p>
+<ul>
+<li>当上拉到一定阈值程度就直接把B区顶部弹到手机可视区的顶部，让可视区从B区开始显示</li>
+<li>当上拉程度未到阈值，就回弹复原</li>
+</ul>
+</li>
+<li><p>当手机可视区从B区向上滚动时候，B区顶部接触带“阻尼带”，有个下拉弹性过程</p>
+<ul>
+<li>当下拉到一定阈值程度就直接把A区底部弹到手机可视区的底部，让可视区从A区底部向上开始显示</li>
+<li>当下拉程度未到阈值，就回弹复原</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>提示</p>
+<ul>
+<li>可用jQuery实现</li>
+</ul>
+</li>
+</ul>
+<h2 id="具体实现过程"><a href="#具体实现过程" class="headerlink" title="具体实现过程"></a>具体实现过程</h2><p>首先什么是阻尼效果？上网查阅：</p>
+<blockquote>
+<p>阻尼（英语：damping）是指任何振动系统在振动中，由于外界作用和/或系统本身固有的原因引起的振动幅度逐渐下降的特性，以及此一特性的量化表征。</p>
+</blockquote>
+<p>好吧，生涩难懂，没能理解。不过网上有说此效果在iPhone上，直接上图比较容易理解：<br><img src="/h5-damping-effect/damping.png" alt="阻尼效果"></p>
+<p>简单来说，就是界面滑动到了<strong>最底部或最顶部</strong>仍可以<strong>比实际的内容多滑动一段距离</strong>然后<strong>回弹</strong>的弹性效果。<br>从效果中可以看出，有三个重点：</p>
+<ul>
+<li>滑动到最顶部或最底部才出现。</li>
+<li>表现出比实际的内容多滑动一段距离，实际操作知道，多滑动的距离即是手指在屏幕上滑动的距离。</li>
+<li>放开手之后，有回弹效果。</li>
+</ul>
+<p>已经知道什么是阻尼效果了，现在思考如何去实现。<br>对于第二点，我们可以监听 touchstart, touchmove, touchend 事件，跟鼠标拖拽的原理类似：</p>
+<ol>
+<li>touchstart 时，记下起点位置；</li>
+<li>touchmove 实时计算滑动的距离。</li>
+<li>touchend 时，能得到最终的滑动距离，跟设定的阈值比较。进入到页面自动控制阶段：大于阈值则让页面滑动到下一页，小于阈值则恢复到起始位置。</li>
+</ol>
+<p>在我实现的过程中，想过两种方案。</p>
+<ol>
+<li><p>利用Js<br>大致思路是，通过监测滚轮事件，检测到页面已经滑动到最底部（最顶部同理），计算手指在页面的滑动距离，touchmove事件触发时，给下面的阻尼带增加padding-bottom，造成页面跟着手指多滑动一段距离的假象。<br>缺点：利用js实现动画比较耗费性能。</p>
+</li>
+<li><p>利用css<br>第二个方案采用css动画，页面多滑动一段距离，实际上也可以通过把页面往手指滑动的方向translate一段距离，这个时候页面只要背景色相同，也可以实现相同效果。<br>因为translate可以出发浏览器硬件加速，可以保证性能。</p>
+</li>
+</ol>
+<p><strong>能用 css 做的，绝对不要用 js 解决。</strong></p>
+<p>但是在第二种方案实现过程中发现一个问题，如果我们在滑动一段距离后才到达最底部，这时候不松开手，又往回滑，就会出现bug。<br><img src="/h5-damping-effect/bug.GIF" alt="bug"></p>
+<p>我是通过监测滚动条的位置判断是否到达底部。</p>
+<pre><code>$(document).scroll(() =&gt; {
+    isBottom = document.scrollTop() &gt;= $(document).height() - $(window).height();
+});
+</code></pre><p>因为往回滑的过程，滚动条也往上滑动，导致isBottom错误，出现bug。</p>
+<p>上网查阅了很多资料，没有找到理想的解决办法，但是找到一个移动端插件：<a href="http://www.swiper.com.cn/" target="_blank" rel="noopener">Swiper</a>，这是纯javascript打造的滑动特效插件，面向手机、平板电脑等移动终端。这个插件也实现了阻尼效果。<br>通过看它的源码发现，Swiper也是利用translate的方法，将页面往上移动一段距离，但是滚动条是自己实现的，也就是通过设置外面容器的overflow： hidden来禁用原生滚动条，自己重新实现一个。<br>道理很简单，我们可以通过touch事件translate页面，同样也可以translate滚动条，这样达到自己可控。</p>
+<p>找到解决办法，仿照Swiper的思路（但是省去了滚动条部分的代码实现，就是页面没有滚动条），粗略实现了阻尼效果。<br><img src="/h5-damping-effect/last_effect.GIF" alt="最终效果"></p>
+<p>详细代码见<a href="https://github.com/BeckyWang/h5-damping-effect" target="_blank" rel="noopener">我的github</a>。其中利用了webpack进行打包编译。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/html/" rel="tag"><i class="fa fa-tag"></i> html</a>
+          
+            <a href="/tags/阻尼效果/" rel="tag"><i class="fa fa-tag"></i> 阻尼效果</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/weinre-tutorial.html" rel="next" title="weinre使用教程">
+                <i class="fa fa-chevron-left"></i> weinre使用教程
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="BeckyWang" />
+            
+              <p class="site-author-name" itemprop="name">BeckyWang</p>
+              <p class="site-description motion-element" itemprop="description">前端小菜鸟，减肥爱好者</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/BeckyWang" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="wangbeibei01018@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#功能描述"><span class="nav-number">1.</span> <span class="nav-text">功能描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具体实现过程"><span class="nav-number">2.</span> <span class="nav-text">具体实现过程</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">BeckyWang</span>
+
+  
+</div>
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
