@@ -80,5 +80,5 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: git@github.com:BeckyWang/BeckyWang.github.io.git
+  repository: https://github.com/BeckyWang/BeckyWang.github.io.git
   branch: master

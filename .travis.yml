@@ -1,0 +1,33 @@
+language: node_js
+node_js: stable
+
+addons:
+  apt:
+    update: true
+
+cache:
+  directories: 
+  - node_modules
+
+install:
+- npm install
+
+script:
+- hexo g
+
+after_success:
+- cd ./public
+- git init
+- git config user.name "BeckyWang"
+- git config user.email "wangbeibei01018@163.com"
+- git add .
+- git commit -m "Update Blog"
+- git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+
+branches:
+  only:
+  - hexo
+
+env:
+  global:
+  - GH_REF: github.com/BeckyWang/BeckyWang.github.io.git
