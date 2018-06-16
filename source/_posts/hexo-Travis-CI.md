@@ -103,3 +103,8 @@ branches指定了执行脚本的分支（即是博客源代码所在的分支）
 ![succcess-2](hexo-Travis-CI/succcess-2.png)
 
 进入自己的博客，便可以看见新写的博客粗来了！
+
+参考网站
+[如何快速搭建一个有域名且持续集成的hexo博客(2.0版)](https://juejin.im/post/596e39916fb9a06baf2ed273)
+[手把手教你使用Travis CI自动部署你的Hexo博客到Github上](https://blog.csdn.net/woblog/article/details/51319364)
+[持续集成服务 Travis CI 教程](http://www.ruanyifeng.com/blog/2017/12/travis_ci_tutorial.html)
