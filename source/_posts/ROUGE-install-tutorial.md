@@ -39,17 +39,17 @@ ROUGE是由微软亚洲研究院知识挖掘组(The Knowledge Mining group at Mi
 
 ## 测试pyrouge是否能使用
 按照[pyrouge](https://pypi.org/project/pyrouge/)的教程，进行测试。 
-1. 安装pyrouge ```pip install pyrouge```
-2. 告诉pyrouge ROUGE的绝对路径 ```pyrouge_set_rouge_path /absolute/path/to/ROUGE-1.5.5/directory``` 
+1. 安装pyrouge `pip install pyrouge`
+2. 告诉pyrouge ROUGE的绝对路径 `pyrouge_set_rouge_path /absolute/path/to/ROUGE-1.5.5/directory` 
 例如我的ROUGE文件放在了/root/RELEASE-1.5.5下，就设置为
-```pyrouge_set_rouge_path /root/RELEASE-1.5.5```
-3. 运次测试 ```python -m pyrouge.test``` 
+`pyrouge_set_rouge_path /root/RELEASE-1.5.5`
+3. 运次测试 `python -m pyrouge.test`
 
 好了，如果一切没问题，就会显示
-```
+`
 Ran 10 tests in 18.055s
 OK
-```
+`
 但是问题有这么简单吗，果然报错：
 ![pyrouge-error](ROUGE-install-tutorial/pyrouge-error.png)
 
@@ -57,10 +57,10 @@ OK
 划重点！ 
 修改Rouge155_test.py文件的第208行(test_options(self)函数中)如下：
 
-    "pyrouge_evaluate_plain_text_files -m {} -s {} -sfp "
-   同理对于test_write_config( )函数报错，修改Rouge155_test.py文件第192行如下：
+    pyrouge_evaluate_plain_text_files -m {} -s {} -sfp
+同理对于test_write_config( )函数报错，修改Rouge155_test.py文件第192行如下：
 
-    "pyrouge_write_config_file -m {m} -s {s} "
+    pyrouge_write_config_file -m {m} -s {s}
 
 再次运行测试，error没有了，但是有几个failure。在[github的issue6里](https://github.com/bheinzerling/pyrouge/issues/6)，作者解释是因为测试用例已过时，建议更新到最新版本。 
 我在Rouge155.py中并没有查到pyrouge_evaluate_plain_text_files相关字段，这个问题只出现在测试过程中，猜测正式代码没问题，测试的failure不解决应该没影响。
