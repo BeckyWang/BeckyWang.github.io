@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="e_qCquDa463mtD8DRDjvZPPe2yJ0bjXAz_jj79kaz0M" />
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="LQMMtIjEz0" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="html,富文本,iframe," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="接上篇博客，现在增加一个新需求：h5页面B区显示富文本HTML片段。 功能描述 要求  有一段PC端显示的富文本HTML片段，在手机H5页面B区上加载显示 保持PC端的样式缩放适应手机屏幕 如果HTML富文本有图片  图片默认不加载 当手机可视区间到B区时候，图片触发懒加载显示 点击富文本图时候，有弹层加载图片，可放大查看     提示  可以考虑用iframe方式处理富文本 但是要考虑到ifra">
+<meta name="keywords" content="html,富文本,iframe">
+<meta property="og:type" content="article">
+<meta property="og:title" content="H5页面PC富文本内容自适应显示">
+<meta property="og:url" content="http://yoursite.com/h5-iframe.html">
+<meta property="og:site_name" content="今晚月色很美">
+<meta property="og:description" content="接上篇博客，现在增加一个新需求：h5页面B区显示富文本HTML片段。 功能描述 要求  有一段PC端显示的富文本HTML片段，在手机H5页面B区上加载显示 保持PC端的样式缩放适应手机屏幕 如果HTML富文本有图片  图片默认不加载 当手机可视区间到B区时候，图片触发懒加载显示 点击富文本图时候，有弹层加载图片，可放大查看     提示  可以考虑用iframe方式处理富文本 但是要考虑到ifra">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/h5-iframe/last.GIF">
+<meta property="og:updated_time" content="2018-06-26T02:23:21.919Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="H5页面PC富文本内容自适应显示">
+<meta name="twitter:description" content="接上篇博客，现在增加一个新需求：h5页面B区显示富文本HTML片段。 功能描述 要求  有一段PC端显示的富文本HTML片段，在手机H5页面B区上加载显示 保持PC端的样式缩放适应手机屏幕 如果HTML富文本有图片  图片默认不加载 当手机可视区间到B区时候，图片触发懒加载显示 点击富文本图时候，有弹层加载图片，可放大查看     提示  可以考虑用iframe方式处理富文本 但是要考虑到ifra">
+<meta name="twitter:image" content="http://yoursite.com/h5-iframe/last.GIF">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/h5-iframe.html"/>
+
+
+
+
+
+  <title>H5页面PC富文本内容自适应显示 | 今晚月色很美</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">今晚月色很美</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/h5-iframe.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="BeckyWang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="今晚月色很美">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">H5页面PC富文本内容自适应显示</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-25T11:11:41+08:00">
+                2018-06-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">阅读次数
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>接<a href="https://beckywang.github.io/h5-damping-effect.html#more" target="_blank" rel="noopener">上篇博客</a>，现在增加一个新需求：h5页面B区显示富文本HTML片段。</p>
+<h2 id="功能描述"><a href="#功能描述" class="headerlink" title="功能描述"></a>功能描述</h2><ul>
+<li><p>要求</p>
+<ul>
+<li>有一段PC端显示的富文本HTML片段，在手机H5页面B区上加载显示</li>
+<li>保持PC端的样式缩放适应手机屏幕</li>
+<li><p>如果HTML富文本有图片</p>
+<ul>
+<li>图片默认不加载</li>
+<li>当手机可视区间到B区时候，图片触发懒加载显示</li>
+<li>点击富文本图时候，有弹层加载图片，可放大查看</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>提示</p>
+<ul>
+<li>可以考虑用iframe方式处理富文本</li>
+<li>但是要考虑到iframe的父子页面的通信和兼容性</li>
+<li>还有考虑到iframe里富文本图片懒加载导致高度变化带来的父页面的高度自适应</li>
+</ul>
+</li>
+</ul>
+<h2 id="具体实现过程"><a href="#具体实现过程" class="headerlink" title="具体实现过程"></a>具体实现过程</h2><h3 id="为什么选择iframe"><a href="#为什么选择iframe" class="headerlink" title="为什么选择iframe"></a>为什么选择iframe</h3><p>看到需求时，第一想到的是只是显示一段富文本内容，为什么要用iframe，直接显示不就行了。<br>iframe还是有挺多缺点的：</p>
+<ol>
+<li>会产生很多页面，不容易管理</li>
+<li>不容易打印</li>
+<li>浏览器的后退按钮无效</li>
+<li>代码复杂，无法被一些搜索引擎索引到，这一点很关键，现在的搜索引擎爬虫还不能很好的处理iframe中的内容，所以使用iframe会不利于搜索引擎优化。</li>
+<li>多数小型的移动设备（PDA 手机）无法完全显示框架，设备兼容性差。</li>
+<li>多框架的页面会增加服务器的http请求，对于大型网站是不可取的。</li>
+</ol>
+<p>这么多缺点为什么还要用呢（关键是我对iframe的使用不太熟悉，手动微笑。。。）<br>高人指点，因为想用iframe隔离全局样式对富文本样式的影响，emmmm，确实很有道理。</p>
+<p>比如你在全局样式里写了一个样式：</p>
+<pre><code>p {
+    font-size: 18px; 
+}
+</code></pre><p>那么富文本的内容也会受到这个全局样式的影响，所有p里面的字体大小都会是18px。这可不是我们想得到的。</p>
+<p>其实看到这，肯定会想到，只要在全局样式里注意一下，不要写一些可能会影响全局的样式就行了，比如不写标签的样式。这对于一个新项目可能较为容易去实现，如果一个项目已经非常庞大或经过多人的修改，把不规范的样式全部改掉好像有点不太现实。</p>
+<p>好了，暂时没有想到其他好的办法，只能选择iframe。</p>
+<h3 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h3><ol>
+<li>图片自适应<br>因为返回的数据是一段html片段，所以选择iframe的srcdoc属性（规定在&lt;iframe&gt;中显示的页面的 HTML 内容），我们可以在获取到数据之后对数据进行一些处理（图片懒加载，后面会讲到），然后再字符串拼接成一段完整的HTML。</li>
+</ol>
+<p>html中设置meta标签，允许用户缩放：</p>
+<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+</code></pre><p>设置全局样式</p>
+<pre><code>&lt;style&gt;
+    body {height: ${clientHeight}px;}   
+    img {max-width: ${clientWidth}px;}
+&lt;/style&gt;
+</code></pre><p>clientHeight是屏幕高度，clientWidth是屏幕宽度。<br>设置body的高度是因为这篇博客需求是接着上篇博客的需求来的（需要实现阻尼效果），在iframe里，我禁用了scroll，具体思路可参考<a href="https://beckywang.github.io/h5-damping-effect.html#more" target="_blank" rel="noopener">上篇博客</a>。<br>设置img最大宽度是为了实现图片自适应，不会因为太大而超出屏幕。</p>
+<ol start="2">
+<li><p>图片懒加载<br>直接上代码：<br>修改字符串内容：</p>
+<pre><code>const newHtml = result.content.replace(/&lt;img.*?\/&gt;/g, match =&gt; {
+    return match.replace(&apos;src&apos;, &apos;src=&quot;./images/iframe/loading.gif&quot; data-src&apos;);
+});
+</code></pre><p>懒加载函数：</p>
+<pre><code>const clientHeight = $(window).height();
+let continueLoading = true;
+const imgTags = document.getElementsByTagName(&apos;img&apos;);
+const lazyload = () =&gt; {
+    let num = 0;
+    for (let img of imgTags) {
+        const { top } = img.getBoundingClientRect();
+        if (/loading.gif/.test(img.src)) {
+            top &lt; clientHeight &amp;&amp; (img.src = img.dataset.src);
+        } else {
+            num++;
+        }
+    }
+    num === imgTags.length &amp;&amp; (continueLoading = false);
+};
+
+$(&apos;.main&apos;).on(&apos;touchmove&apos;, e =&gt; {
+    continueLoading &amp;&amp; lazyload();
+});
+</code></pre></li>
+</ol>
+<p>我这里是先用正则进行替换，先显示loading，并用data-src记住图片地址。然后再touchmove事件中检测并进行懒加载：<br>getBoundingClientRect()用来检测图片是否在可视区域内。<br>continueLoading是一个标志，当所有图片都加载完成后，就不再触发lazyload函数。</p>
+<ol start="3">
+<li><p>图片弹层查看<br>这个非常简单了，用一个绝对定位的div去显示图片就可以了，div背景色设置成白色（或者是其他你喜欢的颜色），display: none，当点击iframe中的图片时，设置div里img标签src的值，并显示div。再次点击弹层的图片，隐藏弹层。</p>
+<pre><code>$(&apos;.main img&apos;).on(&apos;click&apos;, e =&gt; {
+    $(&apos;.img-modal .img-detail&apos;).attr(&apos;src&apos;, e.target.src);
+    $(&apos;.img-modal&apos;).show();
+});
+$(&apos;.img-modal&apos;).on(&apos;click&apos;, () =&gt; {
+    $(&apos;.img-modal&apos;).hide();
+});
+</code></pre></li>
+<li><p>父子间通信<br>因为在ifame所在的B区也要实现阻尼效果。其他部分的思路和A区的阻尼效果实现思路相同，只不过当用户到达页面顶部并下拉到临界值时，使用postmessage通知父页面显示A区，隐藏B区。<br>iframe中:</p>
+<pre><code>$(&apos;.main&apos;).on(&apos;touchend&apos;, e =&gt; {
+    //其他逻辑
+    ...
+    if (last_distance &gt;= RANGE_TOP) {
+        //切换到上一个页面
+        window.parent.postMessage(&apos;prev&apos;, &apos;*&apos;);
+        ...
+    }
+});
+</code></pre><p>父页面中：</p>
+<pre><code>window.addEventListener(&apos;message&apos;, rs =&gt; {
+    if (rs.data === &apos;prev&apos;) {
+        $(&apos;.pageB&apos;).hide();
+        $(&apos;.pageA&apos;).show();
+        ...
+    }
+});
+</code></pre></li>
+</ol>
+<h2 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果"></a>最终效果</h2><p><img src="/h5-iframe/last.GIF" alt="效果"></p>
+<h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><p>代码实现的较为粗糙，还有很多可以优化提高的地方。</p>
+<ul>
+<li>阻尼效果：AB区实现思路一模一样，可考虑抽成公共插件。</li>
+<li>图片点击：使用fastclick或zepto对移动端的click事件进行优化。</li>
+</ul>
+<p>具体代码见<a href="https://github.com/BeckyWang/h5-damping-effect" target="_blank" rel="noopener">我的github</a>，并详细介绍了项目的使用方法。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/html/" rel="tag"><i class="fa fa-tag"></i> html</a>
+          
+            <a href="/tags/富文本/" rel="tag"><i class="fa fa-tag"></i> 富文本</a>
+          
+            <a href="/tags/iframe/" rel="tag"><i class="fa fa-tag"></i> iframe</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/hexo-Travis-CI.html" rel="next" title="利用Travis-CI自动部署hexo博客">
+                <i class="fa fa-chevron-left"></i> 利用Travis-CI自动部署hexo博客
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/ROUGE-install-tutorial.html" rel="prev" title="Ubuntu系统下ROUGE安装教程">
+                Ubuntu系统下ROUGE安装教程 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="BeckyWang" />
+            
+              <p class="site-author-name" itemprop="name">BeckyWang</p>
+              <p class="site-description motion-element" itemprop="description">前端小菜鸟，减肥爱好者</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/BeckyWang" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="wangbeibei01018@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#功能描述"><span class="nav-number">1.</span> <span class="nav-text">功能描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具体实现过程"><span class="nav-number">2.</span> <span class="nav-text">具体实现过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么选择iframe"><span class="nav-number">2.1.</span> <span class="nav-text">为什么选择iframe</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现思路"><span class="nav-number">2.2.</span> <span class="nav-text">实现思路</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最终效果"><span class="nav-number">3.</span> <span class="nav-text">最终效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#优化"><span class="nav-number">4.</span> <span class="nav-text">优化</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">BeckyWang</span>
+
+  
+</div>
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
